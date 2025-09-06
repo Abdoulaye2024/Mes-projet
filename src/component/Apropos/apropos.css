@@ -1,0 +1,524 @@
+/* APropos Page Styles */
+.a-propos-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.a-propos-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('src/assets/images/entreprise.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.a-propos-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.a-propos-hero p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Histoire Section */
+.histoire-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.histoire-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.histoire-text {
+  flex: 1;
+}
+
+.histoire-text h2 {
+  color: #ff6b00;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.histoire-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #ff6b00;
+}
+
+.histoire-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.histoire-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.histoire-stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6b00;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.histoire-image {
+  flex: 1;
+}
+
+.histoire-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  color: #ff6b00;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #ff6b00;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.mission-card,
+.vision-card,
+.valeurs-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.mission-card:hover,
+.vision-card:hover,
+.valeurs-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.mission-card h3,
+.vision-card h3,
+.valeurs-card h3 {
+  color: #ff6b00;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.mission-card p,
+.vision-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.valeurs-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.valeurs-card li {
+  padding: 8px 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.valeurs-card li:last-child {
+  border-bottom: none;
+}
+
+.valeurs-card strong {
+  color: #ff6b00;
+}
+
+/* Équipe Section */
+.equipe-section {
+  padding: 80px 0;
+  background: #fff9f5;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.membre-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.membre-card:hover {
+  transform: translateY(-5px);
+}
+
+.membre-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid #ff6b00;
+}
+
+.membre-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.membre-card h3 {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.membre-role {
+  color: #ff6b00;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.membre-desc {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Chiffres Section */
+.chiffres-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.chiffres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.chiffre-item {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff9f5;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.chiffre-item:hover {
+  transform: translateY(-5px);
+}
+
+.chiffre-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.chiffre-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ff6b00;
+  margin-bottom: 5px;
+}
+
+.chiffre-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Engagement Section */
+.engagement-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.engagement-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.engagement-text {
+  flex: 1;
+}
+
+.engagement-text h3 {
+  color: #ff6b00;
+  margin: 25px 0 15px;
+  font-size: 1.3rem;
+}
+
+.engagement-text h3:first-child {
+  margin-top: 0;
+}
+
+.engagement-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.engagement-image {
+  flex: 1;
+}
+
+.engagement-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ff6b00 0%, #e05e00 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: white;
+  color: #ff6b00;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.primary:hover {
+  background: #f0f0f0;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.big-footer {
+  background: #fff8f0;
+  color: #333;
+  padding: 60px 20px 30px;
+  border-top: 2px solid #ff6b00;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: #ff6b00;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-section li:hover {
+  color: #ff6b00;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffe0cc;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+.social-icons span {
+  margin-left: 15px;
+  color: #ff6b00;
+  cursor: pointer;
+}
+.social-icons span a {
+  text-decoration: none;
+  color: #ff6b00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .histoire-content {
+    flex-direction: column;
+  }
+  
+  .histoire-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .equipe-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chiffres-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .engagement-content {
+    flex-direction: column;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .a-propos-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .chiffres-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
