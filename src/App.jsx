@@ -14,6 +14,7 @@ import Secteurs from "./pages/Secteurs";
 import Processus from "./pages/Processus";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Realisation from "./pages/Realisation";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/pourquoi" element={<Pourquoi />} />
         <Route path="/secteurs" element={<Secteurs />} />
         <Route path="/processus" element={<Processus />} />
+        <Route path="/realisation" element={<Realisation />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

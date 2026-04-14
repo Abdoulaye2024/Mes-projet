@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import { FaArchive } from "react-icons/fa";
+import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <nav className="navbar navbar-expand-lg sticky-top">
       
       {/* LOGO */}
       <Link className="navbar-brand" to="/">
-        <FaArchive /> ArchivPro Dakar
+        <img src="/image/logo-archive.png" alt="ArchivPro Dakar Logo" className="navbar-logo" />
+        {/* <img src="image/logo-archive.png" className="imgCard" alt="" /> */}
       </Link>
 
       {/* MOBILE BUTTON */}
@@ -35,6 +36,7 @@ function Navbar() {
               href="#"
               role="button"
               data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
               Services
             </a>
@@ -62,11 +64,15 @@ function Navbar() {
           </li>
 
           <li className="nav-item">
+            <Link className="nav-link" to="/realisation">Réalisations</Link>
+          </li>
+
+          <li className="nav-item">
             <Link className="nav-link" to="/faq">FAQ</Link>
           </li>
 
           <li className="nav-item">
-            <Link className="btn btn-warning ms-2" to="/contact">
+            <Link className="nav-link btn btn-devis" to="/contact">
               Devis
             </Link>
           </li>

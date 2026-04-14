@@ -200,6 +200,38 @@ function Home() {
         </div>
       </section>
 
+      <section id="partenaires">
+        <p className="section-label">Nos partenaires</p>
+        <h2 className="section-title">Nos clients de <em>confiance</em></h2>
+        <div className="partenaires-container">
+          <div className="partenaires-track">
+            <div className="partenaire-logo"><img src="logo/A-I-B-D.png" alt="A-I-B-D" /></div>
+            <div className="partenaire-logo"><img src="logo/africa-bank.png" alt="Africa Bank" /></div>
+            <div className="partenaire-logo"><img src="logo/amnesty.png" alt="Amnesty" /></div>
+            <div className="partenaire-logo"><img src="logo/BIPA.png" alt="BIPA" /></div>
+            <div className="partenaire-logo"><img src="logo/C-S-E.png" alt="C-S-E" /></div>
+            <div className="partenaire-logo"><img src="logo/carte-brune.png" alt="Carte Brune" /></div>
+            <div className="partenaire-logo"><img src="logo/F-O-N-G-I-P.png" alt="F-O-N-G-I-P" /></div>
+            <div className="partenaire-logo"><img src="logo/groupe-kirene.png" alt="Groupe Kirene" /></div>
+            <div className="partenaire-logo"><img src="logo/HOGIP.jpg" alt="HOGIP" /></div>
+            <div className="partenaire-logo"><img src="logo/I-D-E-P.png" alt="I-D-E-P" /></div>
+            <div className="partenaire-logo"><img src="logo/KPMG.png" alt="KPMG" /></div>
+            <div className="partenaire-logo"><img src="logo/L-C-S.png" alt="L-C-S" /></div>
+            <div className="partenaire-logo"><img src="logo/L-M-B-D.png" alt="L-M-B-D" /></div>
+            <div className="partenaire-logo"><img src="logo/la providence.png" alt="La Providence" /></div>
+            <div className="partenaire-logo"><img src="logo/M-S-A.jpg" alt="M-S-A" /></div>
+            <div className="partenaire-logo"><img src="logo/notaire.png" alt="Notaire" /></div>
+            <div className="partenaire-logo"><img src="logo/P-M-N.png" alt="P-M-N" /></div>
+            <div className="partenaire-logo"><img src="logo/S-A.png" alt="S-A" /></div>
+            <div className="partenaire-logo"><img src="logo/sedima.png" alt="Sedima" /></div>
+            <div className="partenaire-logo"><img src="logo/senegal.jpg" alt="Senegal" /></div>
+            <div className="partenaire-logo"><img src="logo/total-energie.png" alt="Total Energie" /></div>
+            <div className="partenaire-logo"><img src="logo/touba-oil.png" alt="Touba Oil" /></div>
+            <div className="partenaire-logo"><img src="logo/U-A-M.png" alt="U-A-M" /></div>
+          </div>
+        </div>
+      </section>
+
       <section id="pourquoi">
         <p className="section-label" style={{ color: 'var(--gold)' }}>Nos engagements</p>
         <h2 className="section-title section-title-light">Pourquoi les entreprises<br />de Dakar nous <em>choisissent</em></h2>
@@ -428,71 +460,6 @@ function Home() {
               <div className="author-avatar">OS</div>
               <div>
                 <div className="author-name">Ousmane Sarr</div>
-                <div className="author-role">DAF, Groupe Sarr Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className="temoignage-card">
-            <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
-            <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
-            <div className="temoignage-author">
-              <div className="author-avatar">BG</div>
-              <div>
-                <div className="author-name">Birame Gningue</div>
-                <div className="author-role">DAF, Groupe Sarr Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className="temoignage-card">
-            <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
-            <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
-            <div className="temoignage-author">
-              <div className="author-avatar">FD</div>
-              <div>
-                <div className="author-name">Fatou Diop</div>
-                <div className="author-role">DAF, Groupe Sarr Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className="temoignage-card">
-            <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
-            <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
-            <div className="temoignage-author">
-              <div className="author-avatar">AS</div>
-              <div>
-                <div className="author-name">Alimatou Seydi</div>
-                <div className="author-role">DAF, Groupe Sarr Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className="temoignage-card">
-            <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
-            <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
-            <div className="temoignage-author">
-              <div className="author-avatar">MG</div>
-              <div>
-                <div className="author-name">Mouhamed Gaye</div>
-                <div className="author-role">DAF, Groupe Sarr Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className="temoignage-card">
-            <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
-            <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
-            <div className="temoignage-author">
-              <div className="author-avatar">AG</div>
-              <div>
-                <div className="author-name">Abdoulaye Gueye</div>
                 <div className="author-role">DAF, Groupe Sarr Industries</div>
               </div>
             </div>
