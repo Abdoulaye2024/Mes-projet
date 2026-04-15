@@ -15,9 +15,11 @@ import Processus from "./pages/Processus";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Realisation from "./pages/Realisation";
+import RealisationDetail from "./pages/RealisationDetail";
 
 // Components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -40,9 +42,12 @@ function App() {
         <Route path="/secteurs" element={<Secteurs />} />
         <Route path="/processus" element={<Processus />} />
         <Route path="/realisation" element={<Realisation />} />
+        <Route path="/realisation/:id" element={<RealisationDetail />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

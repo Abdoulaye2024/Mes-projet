@@ -52,7 +52,7 @@ function Navbar() {
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/pourquoi">Pourquoi</Link>
+            <Link className="nav-link" to="/pourquoi">À propos</Link>
           </li>
 
           <li className="nav-item">

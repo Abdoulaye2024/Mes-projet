@@ -176,8 +176,8 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
   .navbar {
-    min-height: 85px;
-    padding: 0.75rem 1.5rem !important;
+    min-height: 90px;
+    padding: 1rem 1.5rem !important;
   }
 
   .navbar-brand {
@@ -185,13 +185,15 @@
   }
 
   .navbar-logo {
-    height: 50px;
+    height: 60px;
   }
 
   .nav-link {
-    padding: 0.6rem 1rem !important;
+    padding: 0.7rem 1.1rem !important;
     border-radius: 6px;
-    margin-top: 0.25rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .nav-link::after {
@@ -199,51 +201,95 @@
   }
 
   .dropdown-menu {
-    background: #fafafa;
-    margin-top: 0;
-    border-radius: 8px;
+    background: #ffffff;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 2px solid #e8e8e8;
   }
 
   .dropdown-item {
-    padding: 0.65rem 1.5rem !important;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 0.95rem;
+    font-weight: 500;
   }
 
   .btn-devis {
     width: 100%;
     margin-left: 0 !important;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 576px) {
   .navbar {
-    min-height: 60px;
-    padding: 0.5rem 0.75rem !important;
+    min-height: 75px;
+    padding: 0.75rem 1rem !important;
   }
 
   .navbar-brand {
     font-size: 1.1rem;
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 
   .navbar-brand svg {
     font-size: 1.3rem;
   }
 
+  .navbar-logo {
+    height: 55px;
+  }
+
+  .navbar-toggler {
+    width: 45px;
+    height: 45px;
+    padding: 0.5rem !important;
+    font-size: 1.8rem;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
   .nav-link {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.9rem;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.4rem;
+    color: #333333 !important;
+  }
+
+  .nav-link::after {
+    bottom: 8px;
   }
 
   .dropdown-item {
-    padding: 0.55rem 1rem !important;
-    font-size: 0.85rem;
+    padding: 0.8rem 1.2rem !important;
+    font-size: 0.95rem;
+    font-weight: 500;
   }
 
   .btn-devis {
-    padding: 0.6rem 1.2rem !important;
-    font-size: 0.85rem;
+    width: 100%;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+  }
+
+  .navbar-collapse {
+    background: #ffffff;
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
   }
 }
 
