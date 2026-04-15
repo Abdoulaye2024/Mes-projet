@@ -280,7 +280,7 @@ const FAQ = () => {
                   <i className="fas fa-phone"></i>
                 </div>
                 <h4>Téléphone</h4>
-                <p className="method-value">+221 76 316 21 64</p>
+                <p className="method-value">+221 76 188 55 12</p>
                 <p className="method-hours">Lun-Ven: 8h-18h</p>
               </div>
               <div className="method" data-aos="fade-up" data-aos-delay="100">

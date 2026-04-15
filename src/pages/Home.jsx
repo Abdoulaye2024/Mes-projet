@@ -472,49 +472,68 @@ function Home() {
         <h2 className="section-title">Tout ce que vous voulez <em>savoir</em></h2>
         <div className="faq-grid" id="faqGrid">
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Quels types de documents pouvez-vous archiver ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">Nous archivons tous types de documents d'entreprise : contrats, dossiers RH,
-              comptabilité, documents juridiques, dossiers médicaux, plans techniques, correspondances et tout autre
-              document papier ou numérique.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Quels types de documents pouvez-vous archiver ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              Nous archivons tous types de documents d'entreprise : contrats, dossiers RH, comptabilité, documents juridiques, dossiers médicaux, plans techniques, correspondances et tout autre document papier ou numérique.
+            </div>
           </div>
+
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Combien de temps conservez-vous les documents ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">La durée de conservation dépend de la nature du document et de la réglementation
-              applicable. Nous vous conseillons sur les durées légales obligatoires et gérons automatiquement les alertes
-              d'expiration.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Combien de temps conservez-vous les documents ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              La durée de conservation dépend de la nature du document et de la réglementation applicable. Nous vous conseillons sur les durées légales obligatoires et gérons automatiquement les alertes d'expiration.
+            </div>
           </div>
+
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Comment récupérer un document archivé rapidement ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">Sur simple demande par téléphone ou email, nous pouvons vous transmettre un document
-              numérisé dans l'heure ou vous livrer le document original dans vos bureaux à Dakar dans la journée.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Comment récupérer un document archivé rapidement ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              Sur simple demande par téléphone ou email, nous pouvons vous transmettre un document numérisé dans l'heure ou vous livrer le document original dans vos bureaux à Dakar dans la journée.
+            </div>
           </div>
+
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Êtes-vous conformes à la réglementation sénégalaise ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">Oui, nous sommes pleinement conformes à la réglementation en vigueur au Sénégal,
-              notamment les exigences de la Commission des Données Personnelles (CDP) et les obligations légales d'archivage
-              par secteur.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Êtes-vous conformes à la réglementation sénégalaise ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              Oui, nous sommes pleinement conformes à la réglementation en vigueur au Sénégal, notamment les exigences de la Commission des Données Personnelles (CDP) et les obligations légales d'archivage par secteur.
+            </div>
           </div>
+
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Intervenez-vous dans toute la région de Dakar ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">Oui, nous intervenons dans toute la région de Dakar (Plateau, Almadies, Parcelles
-              Assainies, Pikine, Guédiawaye, etc.) et nous pouvons nous déplacer dans d'autres régions du Sénégal sur
-              demande.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Intervenez-vous dans toute la région de Dakar ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              Oui, nous intervenons dans toute la région de Dakar (Plateau, Almadies, Parcelles Assainies, Pikine, Guédiawaye, etc.) et nous pouvons nous déplacer dans d'autres régions du Sénégal sur demande.
+            </div>
           </div>
+
           <div className="faq-item">
-            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>Quel est le délai pour démarrer une prestation ?<span
-              className="faq-toggle">+</span></div>
-            <div className="faq-answer">Après validation du devis et signature du contrat, notre équipe peut intervenir dans vos
-              locaux sous 3 à 5 jours ouvrés. Pour les urgences, nous proposons une intervention express sous 48h.</div>
+            <div className="faq-question" onClick={(e) => toggleFaq(e.target)}>
+              Quel est le délai pour démarrer une prestation ?
+              <span className="faq-toggle">+</span>
+            </div>
+            <div className="faq-answer">
+              Après validation du devis et signature du contrat, notre équipe peut intervenir dans vos locaux sous 3 à 5 jours ouvrés. Pour les urgences, nous proposons une intervention express sous 48h.
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact">
+      {/* <section id="contact">
         <p className="section-label" style={{ color: 'var(--gold)' }}>Contactez-nous</p>
         <h2 className="section-title section-title-light">Obtenez votre devis<br /><em>gratuit</em> sous 24h</h2>
 
@@ -614,7 +633,7 @@ function Home() {
             <p className="form-note">Réponse garantie sous 24h ouvrées · Devis entièrement gratuit et sans engagement</p>
           </form>
         </div>
-      </section>
+      </section> */}
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.780479086929!2d-17.443885!3d14.667575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1724ebcf41b5d%3A0x2d84ad82d5bef1a6!2sDakar-Plateau%2C%20Dakar!5e1!3m2!1sfr!2ssn!4v1773965687257!5m2!1sfr!2ssn"
@@ -625,43 +644,6 @@ function Home() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
-
-      <footer>
-        <div className="footer-top">
-          <div className="footer-brand">
-            <div className="footer-logo">Archiv<span>Pro</span></div>
-            <p className="footer-tagline">Cabinet d'archivage professionnel à Dakar. La référence en gestion documentaire au
-              Sénégal.</p>
-          </div>
-          <div>
-            <div className="footer-col-title">Services</div>
-            <ul className="footer-col-links">
-              <li><a href="#services">Archivage physique</a></li>
-              <li><a href="#services">Numérisation</a></li>
-              <li><a href="#services">GED</a></li>
-              <li><a href="#services">Destruction sécurisée</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="footer-col-title">Informations</div>
-            <ul className="footer-col-links">
-              <li><a href="#pourquoi">Pourquoi nous</a></li>
-              <li><a href="#secteurs">Secteurs</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="footer-copy">© 2024 ArchivPro Dakar — Tous droits réservés</div>
-          <div className="footer-legal">
-            <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
-            <a href="#">CGV</a>
-          </div>
-        </div>
-      </footer>
-
     </>
   );
 }
