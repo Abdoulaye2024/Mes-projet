@@ -42,12 +42,12 @@ function Navbar() {
             </a>
 
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to="/archivage">Archivage</Link></li>
-              <li><Link className="dropdown-item" to="/numerisation">Numérisation</Link></li>
-              <li><Link className="dropdown-item" to="/ged">GED</Link></li>
-              <li><Link className="dropdown-item" to="/destruction">Destruction</Link></li>
-              <li><Link className="dropdown-item" to="/audit">Audit</Link></li>
-              <li><Link className="dropdown-item" to="/externalisation">Externalisation</Link></li>
+              <li><Link className="dropdown-item" to="/archivage" >Archivage</Link></li> {/*to="/archivage"*/}
+              <li><Link className="dropdown-item" to="/numerisation">Numérisation</Link></li>  {/*to="/numerisation"*/}
+              <li><Link className="dropdown-item" to="/ged">GED</Link></li> {/*to="/ged"*/}
+              <li><Link className="dropdown-item" to="/destruction">Destruction</Link></li> {/*to="/destruction"*/}
+              <li><Link className="dropdown-item" to="/audit">Audit</Link></li> {/*to="/audit"*/}
+              <li><Link className="dropdown-item" >Externalisation</Link></li> {/*to="/externalisation"*/}
             </ul>
           </li>
 

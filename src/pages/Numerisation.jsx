@@ -16,37 +16,37 @@ const Numerisation = () => {
     {
       id: 1,
       name: "Réception & Préparation",
-      icon: "📋",
+      icon: "fas fa-clipboard-list",
       description: "Réception de vos documents, tri et vérification de l'intégrité"
     },
     {
       id: 2,
       name: "Numérisation",
-      icon: "🔍",
+      icon: "fas fa-search",
       description: "Scan haute résolution 300 dpi, traitement des images"
     },
     {
       id: 3,
       name: "Correction d'Image",
-      icon: "🖼️",
+      icon: "fas fa-image",
       description: "Améliorations d'image, correction de perspective et de contraste"
     },
     {
       id: 4,
       name: "OCR & Indexation",
-      icon: "🔤",
+      icon: "fas fa-font",
       description: "Reconnaissance optique multilingue, indexation full-text"
     },
     {
       id: 5,
       name: "Stockage Sécurisé",
-      icon: "💾",
+      icon: "fas fa-save",
       description: "Sauvegarde sur serveurs redondants, chiffrement AES 256"
     },
     {
       id: 6,
       name: "Livraison",
-      icon: "✅",
+      icon: "fas fa-check",
       description: "Export en formats standards, portail accès sécurisé"
     }
   ];
@@ -55,25 +55,25 @@ const Numerisation = () => {
     {
       id: 1,
       name: "Documents Administratifs",
-      icon: "📄",
+      icon: "fas fa-file-alt",
       specs: "Format: A3 à A5 | Couleur | Volume: Illimité"
     },
     {
       id: 2,
       name: "Photographies",
-      icon: "📸",
+      icon: "fas fa-camera",
       specs: "Format: Toutes tailles | Couleur haute fidélité | Archives historiques"
     },
     {
       id: 3,
       name: "Rapports & Livres",
-      icon: "📚",
+      icon: "fas fa-book",
       specs: "Format: Reliés | Reliure en spirale | Gestion reliure"
     },
     {
       id: 4,
       name: "Documents Texte",
-      icon: "📃",
+      icon: "fas fa-file",
       specs: "Toutes origines | Papiers divers | Qualité optimisée"
     }
   ];
@@ -82,28 +82,28 @@ const Numerisation = () => {
     {
       id: 1,
       title: "Résolution",
-      icon: "📊",
+      icon: "fas fa-chart-bar",
       value: "300 dpi standard",
       detail: "jusqu'à 600 dpi si nécessaire"
     },
     {
       id: 2,
       title: "Vitesse",
-      icon: "⚡",
+      icon: "fas fa-bolt",
       value: "500+ pages/jour",
       detail: "Selon volume et complexité"
     },
     {
       id: 3,
       title: "Formats",
-      icon: "🖼️",
+      icon: "fas fa-image",
       value: "PDF, TIFF, JPG, TXT",
       detail: "Formats standards garantis"
     },
     {
       id: 4,
       title: "Confidentialité",
-      icon: "🔐",
+      icon: "fas fa-lock",
       value: "Chiffrement AES-256",
       detail: "Contrats confidentialité signés"
     }
@@ -152,25 +152,25 @@ const Numerisation = () => {
     {
       id: 1,
       title: "Volume Illimité",
-      icon: "📈",
+      icon: "fas fa-chart-line",
       description: "De 100 à 1 million de pages, nous adaptons nos équipes"
     },
     {
       id: 2,
       title: "Délais Courts",
-      icon: "⚡",
+      icon: "fas fa-bolt",
       description: "Projets de 500 000 pages en quelques semaines"
     },
     {
       id: 3,
       title: "Qualité Garantie",
-      icon: "⭐",
+      icon: "fas fa-star",
       description: "Contrôle qualité 100% avec re-scans si besoin"
     },
     {
       id: 4,
       title: "Expertise Éprouvée",
-      icon: "✅",
+      icon: "fas fa-check",
       description: "Nous avons numérisé 4+ millions de pages pour 50+ clients"
     }
   ];
@@ -207,28 +207,28 @@ const Numerisation = () => {
       id: 1,
       title: "ISO 15489",
       subtitle: "Gestion documentaire",
-      icon: "🏆",
+      icon: "fas fa-trophy",
       description: "Normes internationales numérisation et archivage"
     },
     {
       id: 2,
       title: "ISO 9001",
       subtitle: "Qualité de service",
-      icon: "✅",
+      icon: "fas fa-check",
       description: "Processus qualité certifiés et contrôlés"
     },
     {
       id: 3,
       title: "RGPD Compliant",
       subtitle: "Protection données",
-      icon: "🔐",
+      icon: "fas fa-lock",
       description: "Conformité totale données personnelles"
     },
     {
       id: 4,
       title: "Traçabilité Totale",
       subtitle: "Audit complet",
-      icon: "📊",
+      icon: "fas fa-chart-bar",
       description: "Enregistrement de chaque action"
     }
   ];
@@ -283,7 +283,7 @@ const Numerisation = () => {
                 data-aos-delay={index * 100}
               >
                 <div className="step-number">{step.id}</div>
-                <div className="step-icon">{step.icon}</div>
+                <div className="step-icon"><i className={step.icon}></i></div>
                 <h3>{step.name}</h3>
                 <p>{step.description}</p>
               </div>
@@ -306,7 +306,7 @@ const Numerisation = () => {
                 data-aos="fade-up" 
                 data-aos-delay={index * 100}
               >
-                <div className="type-icon">{type.icon}</div>
+                <div className="type-icon"><i className={type.icon}></i></div>
                 <h3>{type.name}</h3>
                 <p className="type-specs">{type.specs}</p>
               </div>
@@ -329,7 +329,7 @@ const Numerisation = () => {
                 data-aos="zoom-in" 
                 data-aos-delay={index * 100}
               >
-                <div className="spec-icon">{spec.icon}</div>
+                <div className="spec-icon"><i className={spec.icon}></i></div>
                 <h3>{spec.title}</h3>
                 <p className="spec-value">{spec.value}</p>
                 <p className="spec-detail">{spec.detail}</p>
@@ -376,7 +376,7 @@ const Numerisation = () => {
                 data-aos="fade-right" 
                 data-aos-delay={index * 100}
               >
-                <div className="capacite-icon">{capacite.icon}</div>
+                <div className="capacite-icon"><i className={capacite.icon}></i></div>
                 <div className="capacite-text">
                   <h3>{capacite.title}</h3>
                   <p>{capacite.description}</p>
@@ -490,7 +490,7 @@ const Numerisation = () => {
                 data-aos="zoom-in" 
                 data-aos-delay={index * 100}
               >
-                <div className="norme-icon">{norme.icon}</div>
+                <div className="norme-icon"><i className={norme.icon}></i></div>
                 <h3>{norme.title}</h3>
                 <p>{norme.subtitle}</p>
                 <p className="norme-desc">{norme.description}</p>
@@ -501,7 +501,7 @@ const Numerisation = () => {
       </section>
 
       {/* CTA */}
-      <section className="cta-numerisation" data-aos="fade-up">
+      <section className="numerisation-cta" data-aos="fade-up">
         <div className="container">
           <div className="cta-content">
             <h2>Prêt à Numériser Vos Documents ?</h2>

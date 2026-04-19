@@ -1,0 +1,286 @@
+/* ===== PAGE DESTRUCTION ===== */
+
+.destruction-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.destruction-header {
+  background: linear-gradient(135deg, var(--gold-pale) 0%, #f0d9b5 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.destruction-header .header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.destruction-header .header-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.destruction-header .header-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.destruction-intro {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.destruction-intro .destruction-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.destruction-intro h2,
+.destruction-features h2,
+.destruction-workflows h2,
+.destruction-security h2,
+.destruction-integration h2,
+.destruction-benefits h2,
+.destruction-cases h2,
+.destruction-normes h2,
+.destruction-cta h2 {
+  font-size: 2.8rem;
+  color: #1a2438;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.destruction-intro-list {
+  list-style: none;
+  padding: 0;
+}
+
+.destruction-intro-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid #e6e6e6;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.destruction-intro-list li strong {
+  color: #c9873a;
+}
+
+.destruction-intro-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.destruction-features,
+.destruction-workflows,
+.destruction-security,
+.destruction-integration,
+.destruction-benefits,
+.destruction-cases,
+.destruction-normes {
+  padding: 80px 20px;
+  background: white;
+}
+
+.feature-grid,
+.workflow-grid,
+.security-grid,
+.integration-grid,
+.benefits-grid,
+.cases-grid,
+.normes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card,
+.workflow-card,
+.security-card,
+.integration-card,
+.benefit-card,
+.case-card,
+.norme-card {
+  background: white;
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover,
+.workflow-card:hover,
+.security-card:hover,
+.integration-card:hover,
+.benefit-card:hover,
+.case-card:hover,
+.norme-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(201, 135, 58, 0.12);
+  color: #c9873a;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.feature-card h3,
+.workflow-card h3,
+.security-card h3,
+.integration-card h3,
+.benefit-card h3,
+.case-card h3,
+.norme-card h3 {
+  color: #1a2438;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.feature-card p,
+.workflow-card p,
+.security-card p,
+.integration-card p,
+.benefit-card p,
+.case-card p,
+.norme-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.workflow-card {
+  border-left: 5px solid #c9873a;
+}
+
+.integration-card {
+  border-top: 4px solid #c9873a;
+}
+
+.benefit-card {
+  border: 1px solid #f0f0f0;
+}
+
+.case-card {
+  border-left: 5px solid #c9873a;
+}
+
+.case-badge {
+  display: inline-block;
+  background: #c9873a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.norme-card {
+  border: 1px solid #c9873a;
+}
+
+.norme-card:hover {
+  background: #c9873a;
+  color: white;
+}
+
+.norme-card:hover .card-icon {
+  background: white;
+  color: #c9873a;
+}
+
+.norme-card:hover h3,
+.norme-card:hover p {
+  color: white;
+}
+
+.destruction-cta {
+  padding: 80px 20px;
+  background: #c9873a;
+  color: white;
+  text-align: center;
+}
+
+.destruction-cta p {
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.destruction-cta button {
+  background: white;
+  color: #c9873a;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destruction-cta button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+  .destruction-intro .destruction-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .destruction-header {
+    padding: 60px 15px;
+  }
+
+  .destruction-intro,
+  .destruction-features,
+  .destruction-workflows,
+  .destruction-security,
+  .destruction-integration,
+  .destruction-benefits,
+  .destruction-cases,
+  .destruction-normes,
+  .destruction-cta {
+    padding: 60px 15px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 35px;
+  }
+}

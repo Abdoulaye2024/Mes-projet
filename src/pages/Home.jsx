@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   const toggleDropdown = (element) => {
@@ -13,6 +15,14 @@ function Home() {
     event.preventDefault();
     // handle form submission
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   return (
     <>
@@ -533,107 +543,111 @@ function Home() {
         </div>
       </section>
 
-      {/* <section id="contact">
-        <p className="section-label" style={{ color: 'var(--gold)' }}>Contactez-nous</p>
-        <h2 className="section-title section-title-light">Obtenez votre devis<br /><em>gratuit</em> sous 24h</h2>
+      <section id="contact" data-aos="fade-up" style={{ background: '#1a2438', padding: '80px 0' }}>
+        <div className="container">
+          <p className="section-label" style={{ color: 'var(--gold)' }}>Contactez-nous</p>
+          <h2 className="section-title section-title-light">Obtenez votre devis<br /><em>gratuit</em> sous 24h</h2>
 
-        <div className="contact-grid">
-          <div className="contact-info">
-            <p className="contact-intro">
-              Notre équipe à Dakar vous répond rapidement. Décrivez-nous votre besoin et nous vous
-              proposons une solution adaptée avec un tarif transparent.
-            </p>
+          <div className="contact-grid">
+            <div className="contact-info">
+              <p className="contact-intro" style={{ color: 'var(--gold)', background: 'none', padding: '0' }}>
+                Notre équipe à Dakar vous répond rapidement. Décrivez-nous votre besoin et nous vous
+                proposons une solution adaptée avec un tarif transparent.
+              </p>
 
-            <div className="contact-item">
-              <div className="contact-item-icon"><i className="fas fa-map-marker-alt"></i></div>
-              <div>
-                <div className="contact-item-label">Adresse</div>
-                <div className="contact-item-value">Plateau, Dakar<br />Sénégal</div>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-item-icon"><i className="fas fa-phone"></i></div>
-              <div>
-                <div className="contact-item-label">Téléphone</div>
-                <div className="contact-item-value">+221 76 316 2164</div>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-item-icon"><i className="fas fa-envelope"></i></div>
-              <div>
-                <div className="contact-item-label">Email</div>
-                <div className="contact-item-value">contact@archivpro.sn</div>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-item-icon"><i className="fas fa-clock"></i></div>
-              <div>
-                <div className="contact-item-label">Horaires</div>
-                <div className="contact-item-value">
-                  Lundi – Vendredi : 8h00 – 18h00<br />Samedi : 9h00 – 13h00
+              <div className="contact-item">
+                <div className="contact-item-icon"><i className="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Adresse</div>
+                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>Plateau, Dakar<br />Sénégal</div>
                 </div>
               </div>
+
+              <div className="contact-item">
+                <div className="contact-item-icon"><i className="fas fa-phone"></i></div>
+                <div>
+                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Téléphone</div>
+                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>+221 76 188 55 12</div>
+                </div>
+              </div>
+
+              <div className="contact-item">
+                <div className="contact-item-icon"><i className="fas fa-envelope"></i></div>
+                <div>
+                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Email</div>
+                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>
+                    <a href="mailto:contact@archivpro.sn" style={{ color: 'var(--gold)', textDecoration: 'none' }}>contact@archivpro.sn</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="contact-item">
+                <div className="contact-item-icon"><i className="fas fa-clock"></i></div>
+                <div>
+                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Horaires</div>
+                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>
+                    Lundi – Vendredi : 8h00 – 18h00<br />Samedi : 9h00 – 13h00
+                  </div>
+                </div>
+              </div>
+
+              <a href="https://wa.me/221763162164" className="whatsapp-btn" target="_blank">
+                <i className="fab fa-whatsapp"></i> Contacter sur WhatsApp
+              </a>
             </div>
 
-            <a href="https://wa.me/221763162164" className="whatsapp-btn" target="_blank">
-              <i className="fab fa-whatsapp"></i> Contacter sur WhatsApp
-            </a>
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label className="form-label">Prénom *</label>
+                  <input className="form-input" type="text" placeholder="Votre prénom" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Nom *</label>
+                  <input className="form-input" type="text" placeholder="Votre nom" required />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Société / Organisation</label>
+                <input className="form-input" type="text" placeholder="Nom de votre entreprise" />
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label className="form-label">Téléphone *</label>
+                  <input className="form-input" type="tel" placeholder="+221 XX XXX XX XX" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Email</label>
+                  <input className="form-input" type="email" placeholder="votre@email.com" />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Service souhaité *</label>
+                <select className="form-select" required>
+                  <option value="" disabled selected>Sélectionner un service</option>
+                  <option>Archivage physique</option>
+                  <option>Numérisation / Scan</option>
+                  <option>Gestion électronique (GED)</option>
+                  <option>Destruction sécurisée</option>
+                  <option>Plusieurs services — à préciser</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Votre message</label>
+                <textarea className="form-textarea"
+                  placeholder="Décrivez votre besoin : volume approximatif de documents, délais souhaités, contraintes particulières…"></textarea>
+              </div>
+
+              <button type="submit" className="btn-primary form-submit">Envoyer ma demande →</button>
+              <p className="form-note">Réponse garantie sous 24h ouvrées · Devis entièrement gratuit et sans engagement</p>
+            </form>
           </div>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <label className="form-label">Prénom *</label>
-                <input className="form-input" type="text" placeholder="Votre prénom" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label">Nom *</label>
-                <input className="form-input" type="text" placeholder="Votre nom" required />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Société / Organisation</label>
-              <input className="form-input" type="text" placeholder="Nom de votre entreprise" />
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label className="form-label">Téléphone *</label>
-                <input className="form-input" type="tel" placeholder="+221 XX XXX XX XX" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label">Email</label>
-                <input className="form-input" type="email" placeholder="votre@email.com" />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Service souhaité *</label>
-              <select className="form-select" required>
-                <option value="" disabled selected>Sélectionner un service</option>
-                <option>Archivage physique</option>
-                <option>Numérisation / Scan</option>
-                <option>Gestion électronique (GED)</option>
-                <option>Destruction sécurisée</option>
-                <option>Plusieurs services — à préciser</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Votre message</label>
-              <textarea className="form-textarea"
-                placeholder="Décrivez votre besoin : volume approximatif de documents, délais souhaités, contraintes particulières…"></textarea>
-            </div>
-
-            <button type="submit" className="btn-primary form-submit">Envoyer ma demande →</button>
-            <p className="form-note">Réponse garantie sous 24h ouvrées · Devis entièrement gratuit et sans engagement</p>
-          </form>
         </div>
-      </section> */}
+      </section>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.780479086929!2d-17.443885!3d14.667575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1724ebcf41b5d%3A0x2d84ad82d5bef1a6!2sDakar-Plateau%2C%20Dakar!5e1!3m2!1sfr!2ssn!4v1773965687257!5m2!1sfr!2ssn"

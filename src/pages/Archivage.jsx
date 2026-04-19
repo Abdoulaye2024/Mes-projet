@@ -18,7 +18,7 @@ const Archivage = () => {
     {
       id: 1,
       title: "Archivage Physique Sécurisé",
-      icon: "📦",
+      icon: "fas fa-box",
       description: "Conservation de documents papier en locaux climatisés et sécurisés",
       benefits: [
         "Environnement contrôlé (température, humidité)",
@@ -37,7 +37,7 @@ const Archivage = () => {
     {
       id: 2,
       title: "Archivage Électronique",
-      icon: "💾",
+      icon: "fas fa-save",
       description: "Conversion de documents papier en format numérique sécurisé",
       benefits: [
         "Accès rapide et facile 24/7",
@@ -57,7 +57,7 @@ const Archivage = () => {
     {
       id: 3,
       title: "Gestion avec GED (Alfresco)",
-      icon: "🗂️",
+      icon: "fas fa-folder-open",
       description: "Système de Gestion Électronique de Documents moderne et collaboratif",
       benefits: [
         "Plateforme collaborative et intuitive",
@@ -78,32 +78,32 @@ const Archivage = () => {
 
   const features = [
     {
-      icon: "🔐",
+      icon: "fas fa-lock",
       title: "Sécurité Maximale",
       description: "Locaux sécurisés, chiffrement des données, accès contrôlé"
     },
     {
-      icon: "📊",
+      icon: "fas fa-chart-bar",
       title: "Traçabilité Complète",
       description: "Suivi de chaque document, historique d'accès, rapports détaillés"
     },
     {
-      icon: "⚡",
+      icon: "fas fa-bolt",
       title: "Accès Rapide",
       description: "Retrouvez vos documents en secondes, pas en heures"
     },
     {
-      icon: "💰",
+      icon: "fas fa-dollar-sign",
       title: "Économies Réalisées",
       description: "Réduction des frais immobiliers et de gestion"
     },
     {
-      icon: "✅",
+      icon: "fas fa-check",
       title: "Conformité Légale",
       description: "Normes ISO 15489, délais de conservation respectés"
     },
     {
-      icon: "🌍",
+      icon: "fas fa-globe",
       title: "Accessibilité Globale",
       description: "Accès depuis n'importe où, collaboratif et synchronisé"
     }
@@ -186,13 +186,13 @@ const Archivage = () => {
                 data-aos="fade-up" 
                 data-aos-delay={index * 100}
               >
-                <div className="method-icon">{method.icon}</div>
+                <div className="method-icon"><i className={method.icon}></i></div>
                 <h3>{method.title}</h3>
                 <p className="method-description">{method.description}</p>
 
                 <div className="method-details">
                   <div className="details-section">
-                    <h4>✅ Avantages</h4>
+                    <h4><i className="fas fa-check"></i> Avantages</h4>
                     <ul>
                       {method.benefits.map((benefit, i) => (
                         <li key={i}>{benefit}</li>
@@ -201,7 +201,7 @@ const Archivage = () => {
                   </div>
 
                   <div className="details-section">
-                    <h4>📋 Processus</h4>
+                    <h4><i className="fas fa-clipboard-list"></i> Processus</h4>
                     <ol>
                       {method.process.map((step, i) => (
                         <li key={i}>{step}</li>
@@ -229,7 +229,7 @@ const Archivage = () => {
                 data-aos="flip-left" 
                 data-aos-delay={index * 50}
               >
-                <div className="feature-icon">{feature.icon}</div>
+                <div className="feature-icon"><i className={feature.icon}></i></div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
@@ -322,9 +322,9 @@ const Archivage = () => {
                 </tr>
                 <tr>
                   <td><strong>Conformité ISO</strong></td>
-                  <td>✅ ISO 15489</td>
-                  <td>✅ ISO 15489</td>
-                  <td>✅ ISO 15489 + RGPD</td>
+                  <td><i className="fas fa-check"></i> ISO 15489</td>
+                  <td><i className="fas fa-check"></i> ISO 15489</td>
+                  <td><i className="fas fa-check"></i> ISO 15489 + RGPD</td>
                 </tr>
                 <tr>
                   <td><strong>Pour Qui ?</strong></td>
@@ -423,25 +423,25 @@ const Archivage = () => {
 
           <div className="normes-grid">
             <div className="norme-card" data-aos="zoom-in">
-              <h3>🏆 ISO 15489</h3>
+              <h3><i className="fas fa-trophy"></i> ISO 15489</h3>
               <p>Gestion des archives et documents</p>
               <p className="norme-description">Normes internationales pour la gestion documentaire et l'archivage</p>
             </div>
 
             <div className="norme-card" data-aos="zoom-in" data-aos-delay="100">
-              <h3>📋 ISO 9001</h3>
+              <h3><i className="fas fa-clipboard-list"></i> ISO 9001</h3>
               <p>Qualité et gestion</p>
               <p className="norme-description">Certification qualité de nos services et processus</p>
             </div>
 
             <div className="norme-card" data-aos="zoom-in" data-aos-delay="200">
-              <h3>🔐 RGPD</h3>
+              <h3><i className="fas fa-lock"></i> RGPD</h3>
               <p>Protection des données</p>
               <p className="norme-description">Conformité complète aux réglementations de protection des données personnelles</p>
             </div>
 
             <div className="norme-card" data-aos="zoom-in" data-aos-delay="300">
-              <h3>⚖️ Droit Sénégalais</h3>
+              <h3><i className="fas fa-balance-scale"></i> Droit Sénégalais</h3>
               <p>Législation locale</p>
               <p className="norme-description">Respect des lois et délais de rétention applicables</p>
             </div>
