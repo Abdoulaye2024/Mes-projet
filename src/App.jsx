@@ -33,7 +33,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+    <Router basename={BASE}>
       <Navbar />
 
       <Routes>

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 function Home() {
   const toggleDropdown = (element) => {
     element.nextElementSibling.classList.toggle('open');
@@ -118,7 +120,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">01 / 04</span>
-            <div className="service-icon"><img src="image/Archivage physique.png" className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src="${BASE}image/Archivage physique.png" className="imgCard" alt="" /></div>
             <div className="service-name">Archivage physique</div>
             <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts à Dakar, avec contrôle
               d'accès, gestion des durées de conservation et inventaire complet.</p>
@@ -133,7 +135,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">02 / 04</span>
-            <div className="service-icon"><img src="image/Numérisation.jpg" className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src="${BASE}image/Numérisation.jpg" className="imgCard" alt="" /></div>
             <div className="service-name">Numérisation / Scan</div>
             <p className="service-desc">Transformation de vos dossiers papier en fichiers numériques indexés, avec
               reconnaissance de texte (OCR) pour une recherche instantanée.</p>
@@ -148,7 +150,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">03 / 04</span>
-            <div className="service-icon"><img src="image/Gestion_Electronique.jpg" className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src="${BASE}image/Gestion_Electronique.jpg" className="imgCard" alt="" /></div>
             <div className="service-name">Gestion Électronique (GED)</div>
             <p className="service-desc">Mise en place d'un système de gestion électronique des documents pour centraliser,
               sécuriser et partager vos fichiers au sein de votre organisation.</p>
@@ -163,7 +165,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">04 / 04</span>
-            <div className="service-icon"><img src="image/Destruction_sécurisée.jpg" className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src={`${BASE}image/Destruction_sécurisée.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Destruction sécurisée</div>
             <p className="service-desc">Élimination confidentielle et certifiée de vos documents en fin de durée de conservation
               légale, avec remise d'un certificat officiel de destruction.</p>
@@ -178,7 +180,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">05 / 06</span>
-            <div className="service-icon"><img src="image/Audit_Conseil.jpg" className="imgCard" alt="Audit et Conseil" /></div>
+            <div className="service-icon"><img src="${BASE}image/Audit_Conseil.jpg" className="imgCard" alt="Audit et Conseil" /></div>
             <div className="service-name">Audit et Conseil en Archivage</div>
             <p className="service-desc">Évaluation complète de vos systèmes d'archivage existants avec recommandations
               personnalisées pour optimiser la gestion documentaire.</p>
@@ -193,7 +195,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">06 / 06</span>
-            <div className="service-icon"><img src="image/Externalisation_Archivage.jpg" className="imgCard" alt="Externalisation" />
+            <div className="service-icon"><img src="${BASE}image/Externalisation_Archivage.jpg" className="imgCard" alt="Externalisation" />
             </div>
             <div className="service-name">Externalisation de l'Archivage</div>
             <p className="service-desc">Prise en charge complète de vos archives physiques et numériques pour réduire les coûts
@@ -215,29 +217,29 @@ function Home() {
         <h2 className="section-title">Nos clients de <em>confiance</em></h2>
         <div className="partenaires-container">
           <div className="partenaires-track">
-            <div className="partenaire-logo"><img src="logo/A-I-B-D.png" alt="A-I-B-D" /></div>
-            <div className="partenaire-logo"><img src="logo/africa-bank.png" alt="Africa Bank" /></div>
-            <div className="partenaire-logo"><img src="logo/amnesty.png" alt="Amnesty" /></div>
-            <div className="partenaire-logo"><img src="logo/BIPA.png" alt="BIPA" /></div>
-            <div className="partenaire-logo"><img src="logo/C-S-E.png" alt="C-S-E" /></div>
-            <div className="partenaire-logo"><img src="logo/carte-brune.png" alt="Carte Brune" /></div>
-            <div className="partenaire-logo"><img src="logo/F-O-N-G-I-P.png" alt="F-O-N-G-I-P" /></div>
-            <div className="partenaire-logo"><img src="logo/groupe-kirene.png" alt="Groupe Kirene" /></div>
-            <div className="partenaire-logo"><img src="logo/HOGIP.jpg" alt="HOGIP" /></div>
-            <div className="partenaire-logo"><img src="logo/I-D-E-P.png" alt="I-D-E-P" /></div>
-            <div className="partenaire-logo"><img src="logo/KPMG.png" alt="KPMG" /></div>
-            <div className="partenaire-logo"><img src="logo/L-C-S.png" alt="L-C-S" /></div>
-            <div className="partenaire-logo"><img src="logo/L-M-B-D.png" alt="L-M-B-D" /></div>
-            <div className="partenaire-logo"><img src="logo/la providence.png" alt="La Providence" /></div>
-            <div className="partenaire-logo"><img src="logo/M-S-A.jpg" alt="M-S-A" /></div>
-            <div className="partenaire-logo"><img src="logo/notaire.png" alt="Notaire" /></div>
-            <div className="partenaire-logo"><img src="logo/P-M-N.png" alt="P-M-N" /></div>
-            <div className="partenaire-logo"><img src="logo/S-A.png" alt="S-A" /></div>
-            <div className="partenaire-logo"><img src="logo/sedima.png" alt="Sedima" /></div>
-            <div className="partenaire-logo"><img src="logo/senegal.jpg" alt="Senegal" /></div>
-            <div className="partenaire-logo"><img src="logo/total-energie.png" alt="Total Energie" /></div>
-            <div className="partenaire-logo"><img src="logo/touba-oil.png" alt="Touba Oil" /></div>
-            <div className="partenaire-logo"><img src="logo/U-A-M.png" alt="U-A-M" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/A-I-B-D.png`} alt="A-I-B-D" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/africa-bank.png`} alt="Africa Bank" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/amnesty.png`} alt="Amnesty" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/BIPA.png`} alt="BIPA" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/C-S-E.png`} alt="C-S-E" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/carte-brune.png`} alt="Carte Brune" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/F-O-N-G-I-P.png`} alt="F-O-N-G-I-P" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/groupe-kirene.png`} alt="Groupe Kirene" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/HOGIP.jpg`} alt="HOGIP" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/I-D-E-P.png`} alt="I-D-E-P" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/KPMG.png`} alt="KPMG" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/L-C-S.png`} alt="L-C-S" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/L-M-B-D.png`} alt="L-M-B-D" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/la providence.png`} alt="La Providence" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/M-S-A.jpg`} alt="M-S-A" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/notaire.png`} alt="Notaire" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/P-M-N.png`} alt="P-M-N" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/S-A.png`} alt="S-A" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/sedima.png`} alt="Sedima" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/senegal.jpg`} alt="Senegal" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/total-energie.png`} alt="Total Energie" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/touba-oil.png`} alt="Touba Oil" /></div>
+            <div className="partenaire-logo"><img src={`${BASE}logo/U-A-M.png`} alt="U-A-M" /></div>
           </div>
         </div>
       </section>

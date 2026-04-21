@@ -142,7 +142,7 @@ const Archivage = () => {
       {/* HEADER */}
       <section className="archivage-header" data-aos="fade-down">
         <div className="header-content">
-          <img src="/image/logo-archive.png" alt="Archivage" className="header-logo" />
+          <img src={`${BASE}image/logo-archive.png`} alt="Archivage" className="header-logo" />
           <h1 className="header-title">Solutions d'Archivage Professionnel</h1>
           <p className="header-subtitle">
             Sécurisez votre patrimoine documentaire avec nos solutions d'archivage adaptées à vos besoins
@@ -167,7 +167,7 @@ const Archivage = () => {
             </ul>
           </div>
           <div className="intro-image" data-aos="zoom-in">
-            <img src="/image/Archivage physique.png" alt="Archivage professionnel" />
+            <img src={`${BASE}image/Archivage physique.png`} alt="Archivage professionnel" />
           </div>
         </div>
       </section>

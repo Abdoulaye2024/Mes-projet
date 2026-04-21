@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg sticky-top">
       
       {/* LOGO */}
       <Link className="navbar-brand" to="/">
-        <img src="/image/logo-archive.png" alt="ArchivPro Dakar Logo" className="navbar-logo" />
+        <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar Logo" className="navbar-logo" />
         {/* <img src="image/logo-archive.png" className="imgCard" alt="" /> */}
       </Link>
 

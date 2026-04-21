@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Realisation.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 const realisations = [
   {
     id: 1,
@@ -326,7 +328,7 @@ const Realisation = () => {
       {/* HEADER AVEC LOGO */}
       <section className="realisation-header" data-aos="fade-down">
         <div className="header-content">
-          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Nos Réalisations</h1>
           <p className="header-subtitle">Nos succès passés sont la garantie de votre succès futur</p>
         </div>

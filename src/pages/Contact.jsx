@@ -85,7 +85,7 @@ const Contact = () => {
       {/* HEADER CONTACT */}
       <section className="contact-header" data-aos="fade-down">
         <div className="header-content">
-          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Nous Contacter</h1>
           <p className="header-subtitle">Parlons de votre projet d'archivage</p>
         </div>
