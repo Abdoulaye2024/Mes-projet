@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Audit.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Audit = () => {
   useEffect(() => {
     AOS.init({

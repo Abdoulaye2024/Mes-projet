@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './FAQ.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const FAQ = () => {
   const [expanded, setExpanded] = useState(null);
 

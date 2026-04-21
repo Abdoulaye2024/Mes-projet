@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Externalisation.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Externalisation = () => {
   useEffect(() => {
     AOS.init({

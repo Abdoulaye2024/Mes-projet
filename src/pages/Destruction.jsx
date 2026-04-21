@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Destruction.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Destruction = () => {
   useEffect(() => {
     AOS.init({
