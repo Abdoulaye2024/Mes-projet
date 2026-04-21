@@ -49,7 +49,7 @@ function Navbar() {
               <li><Link className="dropdown-item" to="/ged">GED</Link></li> {/*to="/ged"*/}
               <li><Link className="dropdown-item" to="/destruction">Destruction</Link></li> {/*to="/destruction"*/}
               <li><Link className="dropdown-item" to="/audit">Audit</Link></li> {/*to="/audit"*/}
-              <li><Link className="dropdown-item" >Externalisation</Link></li> {/*to="/externalisation"*/}
+              <li><Link className="dropdown-item" to="/externalisation" >Externalisation</Link></li> {/*to="/externalisation"*/}
             </ul>
           </li>
 
