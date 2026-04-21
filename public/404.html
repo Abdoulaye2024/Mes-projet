@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ArchivPro Dakar</title>
+    <script>
+      // Redirige vers index.html en gardant le chemin dans l'URL
+      var path = window.location.pathname.replace('/Mes-projet', '');
+      window.location.replace(
+        '/Mes-projet/?path=' + encodeURIComponent(path)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
