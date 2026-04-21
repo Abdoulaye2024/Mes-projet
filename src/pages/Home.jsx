@@ -593,7 +593,7 @@ function Home() {
                 </div>
               </div>
 
-              <a href="https://wa.me/221763162164" className="whatsapp-btn" target="_blank">
+              <a href="https://wa.me/221761885512" className="whatsapp-btn" target="_blank">
                 <i className="fab fa-whatsapp"></i> Contacter sur WhatsApp
               </a>
             </div>
