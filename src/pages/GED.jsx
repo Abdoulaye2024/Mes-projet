@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './GED.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const GED = () => {
   useEffect(() => {
     AOS.init({
@@ -197,7 +195,7 @@ const GED = () => {
             </ul>
           </div>
           <div className="ged-intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Gestion_Electronique.jpg`} alt="GED Alfresco" />
+            <img src="/image/Gestion_Electronique.jpg" alt="GED Alfresco" />
           </div>
         </div>
       </section>

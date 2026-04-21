@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Secteurs.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const Secteurs = () => {
   useEffect(() => {
     AOS.init({
@@ -182,7 +180,7 @@ const Secteurs = () => {
       {/* HEADER SECTEURS */}
       <section className="secteurs-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Secteurs d'Activité</h1>
           <p className="header-subtitle">ArchivPro intervient dans tous les secteurs économiques du Sénégal</p>
         </div>

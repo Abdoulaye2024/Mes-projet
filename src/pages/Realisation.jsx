@@ -4,13 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Realisation.css";
 
-const BASE = import.meta.env.BASE_URL;
-
 const realisations = [
   {
     id: 1,
     client: "LES CABLERIES DU SENEGAL",
-    logo: `${BASE}logo/L-C-S.png`,
+    logo: "/logo/L-C-S.png",
     mission: "Traitement physique des archives, tri, classement, conditionnement, réorganisation des salles",
     type: "Archivage",
     year: "2026",
@@ -26,7 +24,7 @@ const realisations = [
   {
     id: 2,
     client: "AIBD SA",
-    logo: `${BASE}logo/A-I-B-D.png`,
+    logo: "/logo/A-I-B-D.png",
     mission: "Archivage physique et numérisation des dossiers de marchés (2021-2024)",
     type: "Numérisation",
     year: "2026",
@@ -42,7 +40,7 @@ const realisations = [
   {
     id: 3,
     client: "KPMG SENEGAL",
-    logo: `${BASE}logo/KPMG.png`,
+    logo: "/logo/KPMG.png",
     mission: "Inventaire, tri, classement et réorganisation des archives",
     type: "Archivage",
     year: "2026",
@@ -58,7 +56,7 @@ const realisations = [
   {
     id: 4,
     client: "CSE",
-    logo: `${BASE}logo/C-S-E.png`,
+    logo: "/logo/C-S-E.png",
     mission: "Installation de rayonnages (512 mètres linéaires)",
     type: "Infrastructure",
     year: "2026",
@@ -74,7 +72,7 @@ const realisations = [
   {
     id: 5,
     client: "ASSURANCES LA PROVIDENCE",
-    logo: `${BASE}logo/la providence.png`,
+    logo: "/logo/la providence.png",
     mission: "Rayonnages + scanner professionnel",
     type: "Infrastructure",
     year: "2025",
@@ -90,7 +88,7 @@ const realisations = [
   {
     id: 6,
     client: "FONGIP",
-    logo: `${BASE}logo/F-O-N-G-I-P.png`,
+    logo: "/logo/F-O-N-G-I-P.png",
     mission: "Archivage + mise en place GED (Alfresco)",
     type: "GED",
     year: "2025",
@@ -106,7 +104,7 @@ const realisations = [
   {
     id: 7,
     client: "CNID",
-    logo: `${BASE}logo/I-D-E-P.png`,
+    logo: "/logo/I-D-E-P.png",
     mission: "Formation archivage numérique + GED",
     type: "Formation",
     year: "2023",
@@ -122,7 +120,7 @@ const realisations = [
   {
     id: 8,
     client: "UAM",
-    logo: `${BASE}logo/U-A-M.png`,
+    logo: "/logo/U-A-M.png",
     mission: "Transfert bibliothèque (1240 ouvrages)",
     type: "Transfert",
     year: "2024",
@@ -138,7 +136,7 @@ const realisations = [
   {
     id: 9,
     client: "TOUBA OIL",
-    logo: `${BASE}logo/touba-oil.png`,
+    logo: "/logo/touba-oil.png",
     mission: "Rayonnages + mise en place GED",
     type: "Infrastructure",
     year: "2024",
@@ -154,7 +152,7 @@ const realisations = [
   {
     id: 10,
     client: "HOGIP",
-    logo: `${BASE}logo/HOGIP.jpg`,
+    logo: "/logo/HOGIP.jpg",
     mission: "Formation de +100 agents sur archivage numérique",
     type: "Formation",
     year: "2024",
@@ -170,7 +168,7 @@ const realisations = [
   {
     id: 11,
     client: "SEDIMA S.A",
-    logo: `${BASE}logo/sedima.png`,
+    logo: "/logo/sedima.png",
     mission: "1408 mètres linéaires + GED + matériel informatique",
     type: "Infrastructure",
     year: "2022",
@@ -186,7 +184,7 @@ const realisations = [
   {
     id: 12,
     client: "GROUPE KIRENE",
-    logo: `${BASE}logo/groupe-kirene.png`,
+    logo: "/logo/groupe-kirene.png",
     mission: "Installation rayonnages industriels",
     type: "Infrastructure",
     year: "2023",
@@ -202,7 +200,7 @@ const realisations = [
   {
     id: 13,
     client: "TOTAL ENERGIES",
-    logo: `${BASE}logo/total-energie.png`,
+    logo: "/logo/total-energie.png",
     mission: "704 mètres linéaires de stockage",
     type: "Infrastructure",
     year: "2023",
@@ -218,7 +216,7 @@ const realisations = [
   {
     id: 14,
     client: "IDEP",
-    logo: `${BASE}logo/I-D-E-P.png`,
+    logo: "/logo/I-D-E-P.png",
     mission: "Numérisation (534000 pages) + catalogage",
     type: "Numérisation",
     year: "2018",
@@ -234,7 +232,7 @@ const realisations = [
   {
     id: 15,
     client: "SENEGAL NUMERIQUE",
-    logo: `${BASE}logo/senegal.jpg`,
+    logo: "/logo/senegal.jpg",
     mission: "Archivage + numérisation projets",
     type: "Numérisation",
     year: "2017",
@@ -328,7 +326,7 @@ const Realisation = () => {
       {/* HEADER AVEC LOGO */}
       <section className="realisation-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Nos Réalisations</h1>
           <p className="header-subtitle">Nos succès passés sont la garantie de votre succès futur</p>
         </div>

@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Numerisation.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const Numerisation = () => {
   useEffect(() => {
     AOS.init({
@@ -240,7 +238,7 @@ const Numerisation = () => {
       {/* HEADER */}
       <section className="numerisation-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="Numérisation" className="header-logo" />
+          <img src="/image/logo-archive.png" alt="Numérisation" className="header-logo" />
           <h1 className="header-title">Services de Numérisation Professionnelle</h1>
           <p className="header-subtitle">
             Transformez vos documents papier en fichiers numériques de haute qualité pour une gestion optimale
@@ -265,7 +263,7 @@ const Numerisation = () => {
             </ul>
           </div>
           <div className="intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Numérisation.jpg`} alt="Numérisation professionnelle" />
+            <img src="/image/Numérisation.jpg" alt="Numérisation professionnelle" />
           </div>
         </div>
       </section>

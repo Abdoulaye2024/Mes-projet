@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Destruction.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const Destruction = () => {
   useEffect(() => {
     AOS.init({
@@ -197,7 +195,7 @@ const Destruction = () => {
             </ul>
           </div>
           <div className="destruction-intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Destruction_sécurisée.jpg`} alt="Destruction Sécurisée" />
+            <img src="/image/Destruction_sécurisée.jpg" alt="Destruction Sécurisée" />
           </div>
         </div>
       </section>

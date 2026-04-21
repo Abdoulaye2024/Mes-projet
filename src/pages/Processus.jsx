@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Processus.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const Processus = () => {
   useEffect(() => {
     AOS.init({
@@ -178,7 +176,7 @@ const Processus = () => {
       {/* HEADER PROCESSUS */}
       <section className="processus-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Notre Méthode</h1>
           <p className="header-subtitle">Un processus éprouvé en 4 étapes simples et transparentes</p>
         </div>

@@ -3,8 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Contact.css';
 
-const BASE = import.meta.env.BASE_URL;
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -87,7 +85,7 @@ const Contact = () => {
       {/* HEADER CONTACT */}
       <section className="contact-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Nous Contacter</h1>
           <p className="header-subtitle">Parlons de votre projet d'archivage</p>
         </div>
