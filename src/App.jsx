@@ -1,3 +1,12 @@
+// ─────────────────────────────────────────────────────────────
+// BASE URL des images
+// En local      → ""          (vide, chemin = /image/...)
+// Sur GitHub    → "/Mes-projet" (chemin = /Mes-projet/image/...)
+// import.meta.env.BASE_URL est automatiquement fourni par Vite
+// selon la valeur de "base" dans vite.config.js
+// ─────────────────────────────────────────────────────────────
+const BASE = import.meta.env.BASE_URL;
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages

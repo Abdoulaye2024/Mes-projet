@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Archivage.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Archivage = () => {
   const [activeTab, setActiveTab] = useState('presentation');
 
@@ -114,19 +116,19 @@ const Archivage = () => {
       client: "IDEP (Institut de Développement Économique)",
       project: "Numérisation massive 534 000 pages",
       results: "Digitalisation complète, recherche instantanée, gain de productivité 60%",
-      image: "/image/archive_img.png"
+      image: `${BASE}image/archive_img.png`
     },
     {
       client: "FONGIP (Fonds de Garantie)",
       project: "Archivage des dossiers clients 10 ans",
       results: "Conformité légale, traçabilité totale, gain d'espace 80%",
-      image: "/image/archive_img2.png"
+      image: `${BASE}image/archive_img2.png`
     },
     {
       client: "Assurances Providence",
       project: "GED avec workflows automatisés",
       results: "Processus de traitement accélérés, satisfaction clients améliorée",
-      image: "/image/Audit_Conseil.jpg"
+      image: `${BASE}image/Audit_Conseil.jpg`
     }
   ];
 
@@ -142,7 +144,7 @@ const Archivage = () => {
       {/* HEADER */}
       <section className="archivage-header" data-aos="fade-down">
         <div className="header-content">
-          <img src="/image/logo-archive.png" alt="Archivage" className="header-logo" />
+          <img src={`${BASE}image/logo-archive.png`} alt="Archivage" className="header-logo" />
           <h1 className="header-title">Solutions d'Archivage Professionnel</h1>
           <p className="header-subtitle">
             Sécurisez votre patrimoine documentaire avec nos solutions d'archivage adaptées à vos besoins
@@ -167,7 +169,7 @@ const Archivage = () => {
             </ul>
           </div>
           <div className="intro-image" data-aos="zoom-in">
-            <img src="/image/Archivage physique.png" alt="Archivage professionnel" />
+            <img src={`${BASE}image/Archivage physique.png`} alt="Archivage professionnel" />
           </div>
         </div>
       </section>

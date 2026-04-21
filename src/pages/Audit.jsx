@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Audit.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Audit = () => {
   useEffect(() => {
     AOS.init({
@@ -195,7 +197,7 @@ const Audit = () => {
             </ul>
           </div>
           <div className="audit-intro-image" data-aos="zoom-in">
-            <img src="/image/Audit_Conseil.jpg" alt="Audit d'Archives" />
+            <img src={`${BASE}image/Audit_Conseil.jpg`} alt="Audit d'Archives" />
           </div>
         </div>
       </section>
