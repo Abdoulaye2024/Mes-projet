@@ -10,7 +10,7 @@ const realisations = [
   {
     id: 1,
     client: "LES CABLERIES DU SENEGAL",
-    logo: `${BASE}logo/Cableries.png`,
+    logo: `${BASE}logo/L-C-S.png`,
     mission: "Traitement physique des archives, tri, classement, conditionnement, réorganisation des salles",
     type: "Archivage",
     year: "2026",
@@ -58,7 +58,7 @@ const realisations = [
   {
     id: 4,
     client: "CSE",
-    logo: `${BASE}logo/CSE.png`,
+    logo: `${BASE}logo/C-S-E.png`,
     mission: "Installation de rayonnages (512 mètres linéaires)",
     type: "Infrastructure",
     year: "2026",
@@ -106,7 +106,7 @@ const realisations = [
   {
     id: 7,
     client: "CNID",
-    logo: `${BASE}logo/CNID.png`,
+    logo: `${BASE}logo/amnesty.png`,
     mission: "Formation archivage numérique + GED",
     type: "Formation",
     year: "2023",
@@ -328,7 +328,7 @@ const Realisation = () => {
       {/* HEADER AVEC LOGO */}
       <section className="realisation-header" data-aos="fade-down">
         <div className="header-content">
-          <img src="/image/logo-archive.png" alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title">Nos Réalisations</h1>
           <p className="header-subtitle">Nos succès passés sont la garantie de votre succès futur</p>
         </div>
