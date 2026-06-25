@@ -28,35 +28,6 @@ function Home() {
 
   return (
     <>
-      <nav id="navbar">
-        <a className="nav-logo" href="#">
-          Archiv<span>Pro</span>
-          <span className="nav-badge">Dakar</span>
-        </a>
-        <ul className="nav-links" id="navLinks">
-          <li><a href="#accueil">Accueil</a></li>
-          <li className="has-dropdown">
-            <a href="#services" onClick={(e) => toggleDropdown(e.target.parentElement)}>Services ▾</a>
-            <ul className="dropdown">
-              <li><a href="#archivage">Archivage</a></li>
-              <li><a href="#numerisation">Numérisation</a></li>
-              <li><a href="#ged">Gestion Électronique (GED)</a></li>
-              <li><a href="#destruction">Destruction sécurisée</a></li>
-              <li><a href="#audit">Audit</a></li>
-              <li><a href="#externalisation">Externalisation</a></li>
-            </ul>
-          </li>
-          <li><a href="#pourquoi">Pourquoi nous</a></li>
-          <li><a href="#secteurs">Secteurs</a></li>
-          <li><a href="#processus">Méthode</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" className="nav-cta">Devis gratuit</a></li>
-        </ul>
-        <button className="nav-toggle" id="navToggle" onClick={() => document.getElementById('navLinks').classList.toggle('open')}>
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-
       <section className="hero" id="accueil">
         <div className="hero-flag">
           <div className="flag-dot"><span className="g"></span><span className="y"></span><span className="r"></span></div>
@@ -213,7 +184,7 @@ function Home() {
       </section>
 
       <section id="partenaires">
-        <p className="section-label">Nos partenaires</p>
+        <p className="section-label" style={{ fontWeight: 'bold' }}>Nos partenaires</p>
         <h2 className="section-title">Nos clients de <em>confiance</em></h2>
         <div className="partenaires-container">
           <div className="partenaires-track">
@@ -245,7 +216,7 @@ function Home() {
       </section>
 
       <section id="pourquoi">
-        <p className="section-label" style={{ color: 'var(--gold)' }}>Nos engagements</p>
+        <p className="section-label" style={{ color: '#287F91', fontWeight: 'bold' }}>Nos engagements</p>
         <h2 className="section-title section-title-light">Pourquoi les entreprises<br />de Dakar nous <em>choisissent</em></h2>
         <div className="why-grid">
           <div className="why-list">
@@ -344,7 +315,7 @@ function Home() {
       </section>
 
       <section id="secteurs">
-        <p className="section-label">Secteurs d'activité</p>
+        <p className="section-label" style={{ fontWeight: 'bold' }}>Secteurs d'activité</p>
         <h2 className="section-title">Nous intervenons dans<br />tous les <em>secteurs</em></h2>
 
         <div className="secteurs-grid">
@@ -434,7 +405,7 @@ function Home() {
       </section>
 
       <section id="temoignages">
-        <p className="section-label" style={{ color: 'var(--gold)' }}>Témoignages</p>
+        <p className="section-label" style={{ color: '#287F91', fontWeight: 'bold' }}>Témoignages</p>
         <h2 className="section-title section-title-light">Ce que disent nos <em>clients</em></h2>
         <div className="temoignages-grid">
           <div className="temoignage-card">
@@ -480,7 +451,7 @@ function Home() {
       </section>
 
       <section id="faq">
-        <p className="section-label">Questions fréquentes</p>
+        <p className="section-label" style={{ fontWeight: 'bold' }}>Questions fréquentes</p>
         <h2 className="section-title">Tout ce que vous voulez <em>savoir</em></h2>
         <div className="faq-grid" id="faqGrid">
           <div className="faq-item">
@@ -547,12 +518,12 @@ function Home() {
 
       <section id="contact" data-aos="fade-up" style={{ background: '#1a2438', padding: '80px 0' }}>
         <div className="container">
-          <p className="section-label" style={{ color: 'var(--gold)' }}>Contactez-nous</p>
+          <p className="section-label" style={{ color: '#287F91', fontWeight: 'bold' }}>Contactez-nous</p>
           <h2 className="section-title section-title-light">Obtenez votre devis<br /><em>gratuit</em> sous 24h</h2>
 
           <div className="contact-grid">
             <div className="contact-info">
-              <p className="contact-intro" style={{ color: 'var(--gold)', background: 'none', padding: '0' }}>
+              <p className="contact-intro" style={{ color: '#ffffff', background: 'none', padding: '0' }}>
                 Notre équipe à Dakar vous répond rapidement. Décrivez-nous votre besoin et nous vous
                 proposons une solution adaptée avec un tarif transparent.
               </p>
@@ -560,25 +531,25 @@ function Home() {
               <div className="contact-item">
                 <div className="contact-item-icon"><i className="fas fa-map-marker-alt"></i></div>
                 <div>
-                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Adresse</div>
-                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>Plateau, Dakar<br />Sénégal</div>
+                  <div className="contact-item-label" style={{ color: '#287F91' }}>Adresse</div>
+                  <div className="contact-item-value" style={{ color: '#287F91' }}>Plateau, Dakar<br />Sénégal</div>
                 </div>
               </div>
 
               <div className="contact-item">
                 <div className="contact-item-icon"><i className="fas fa-phone"></i></div>
                 <div>
-                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Téléphone</div>
-                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>+221 76 188 55 12</div>
+                  <div className="contact-item-label" style={{ color: '#287F91' }}>Téléphone</div>
+                  <div className="contact-item-value" style={{ color: '#287F91' }}>+221 76 188 55 12</div>
                 </div>
               </div>
 
               <div className="contact-item">
                 <div className="contact-item-icon"><i className="fas fa-envelope"></i></div>
                 <div>
-                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Email</div>
-                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>
-                    <a href="mailto:contact@archivpro.sn" style={{ color: 'var(--gold)', textDecoration: 'none' }}>contact@archivpro.sn</a>
+                  <div className="contact-item-label" style={{ color: '#287F91' }}>Email</div>
+                  <div className="contact-item-value" style={{ color: '#287F91' }}>
+                    <a href="mailto:contact@archivpro.sn" style={{ color: '#287F91', textDecoration: 'none' }}>contact@archivpro.sn</a>
                   </div>
                 </div>
               </div>
@@ -586,8 +557,8 @@ function Home() {
               <div className="contact-item">
                 <div className="contact-item-icon"><i className="fas fa-clock"></i></div>
                 <div>
-                  <div className="contact-item-label" style={{ color: 'var(--gold)' }}>Horaires</div>
-                  <div className="contact-item-value" style={{ color: 'var(--gold)' }}>
+                  <div className="contact-item-label" style={{ color: '#287F91' }}>Horaires</div>
+                  <div className="contact-item-value" style={{ color: '#287F91' }}>
                     Lundi – Vendredi : 8h00 – 18h00<br />Samedi : 9h00 – 13h00
                   </div>
                 </div>

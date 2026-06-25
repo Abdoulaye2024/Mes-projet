@@ -177,8 +177,8 @@ const Destruction = () => {
     <div className="destruction-page">
       <section className="destruction-header" data-aos="fade-down">
         <div className="header-content">
-          <h1 className="header-title">Destruction de Documents Sécurisée</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Destruction de Documents Sécurisée</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Éliminez vos documents confidentiels en toute sécurité avec nos services de destruction certifiée, conformes aux normes les plus strictes.
           </p>
         </div>
@@ -275,7 +275,7 @@ const Destruction = () => {
               <div key={index} className="benefit-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-icon"><i className={item.icon}></i></div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p style={{ color: '#000000' }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -292,7 +292,7 @@ const Destruction = () => {
                 <h3>{item.title}</h3>
                 <p>{item.challenge}</p>
                 <p>{item.result}</p>
-                <span className="case-badge">{item.badge}</span>
+                <span className="case-badge" style={{ backgroundColor: '#287F91' }}>{item.badge}</span>
               </div>
             ))}
           </div>

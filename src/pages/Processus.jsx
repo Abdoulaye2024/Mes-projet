@@ -179,8 +179,8 @@ const Processus = () => {
       <section className="processus-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
-          <h1 className="header-title">Notre Méthode</h1>
-          <p className="header-subtitle">Un processus éprouvé en 4 étapes simples et transparentes</p>
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Notre Méthode</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>Un processus éprouvé en 4 étapes simples et transparentes</p>
         </div>
       </section>
 
@@ -413,8 +413,8 @@ const Processus = () => {
       {/* CTA FINAL */}
       <section className="processus-cta">
         <div className="cta-content">
-          <h2>Prêt à simplifier votre archivage?</h2>
-          <p>Démarrez avec notre audit diagnostique gratuit et sans engagement</p>
+          <h2 style={{ color: '#ffffff' }}>Prêt à simplifier votre archivage?</h2>
+          <p style={{ color: '#ffffff' }}>Démarrez avec notre audit diagnostique gratuit et sans engagement</p>
           <a href="/contact" className="btn-cta-primary">Demander un audit gratuit</a>
         </div>
       </section>

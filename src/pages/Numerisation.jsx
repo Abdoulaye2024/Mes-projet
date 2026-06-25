@@ -241,8 +241,8 @@ const Numerisation = () => {
       <section className="numerisation-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="Numérisation" className="header-logo" />
-          <h1 className="header-title">Services de Numérisation Professionnelle</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Services de Numérisation Professionnelle</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Transformez vos documents papier en fichiers numériques de haute qualité pour une gestion optimale
           </p>
         </div>
@@ -467,7 +467,7 @@ const Numerisation = () => {
               >
                 <div className="case-header">
                   <h3>{caseItem.client}</h3>
-                  <span className="case-badge">{caseItem.volume}</span>
+                  <span className="case-badge" style={{ backgroundColor: '#287F91' }}>{caseItem.volume}</span>
                 </div>
                 <p className="case-detail"><strong>Projet:</strong> {caseItem.project}</p>
                 <p className="case-detail"><strong>Durée:</strong> {caseItem.duration}</p>
@@ -506,9 +506,9 @@ const Numerisation = () => {
       <section className="numerisation-cta" data-aos="fade-up">
         <div className="container">
           <div className="cta-content">
-            <h2>Prêt à Numériser Vos Documents ?</h2>
-            <p>Obtenir un devis gratuit pour votre projet de numérisation</p>
-            <button className="cta-button">Contactez-nous Aujourd'hui</button>
+            <h2 style={{ color: '#ffffff' }}>Prêt à Numériser Vos Documents ?</h2>
+            <p style={{ color: '#ffffff' }}>Obtenir un devis gratuit pour votre projet de numérisation</p>
+            <button className="cta-button" style={{ backgroundColor: '#287F91', color: '#ffffff' }}>Contactez-nous Aujourd'hui</button>
           </div>
         </div>
       </section>

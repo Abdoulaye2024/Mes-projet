@@ -183,8 +183,8 @@ const Secteurs = () => {
       <section className="secteurs-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
-          <h1 className="header-title">Secteurs d'Activité</h1>
-          <p className="header-subtitle">ArchivPro intervient dans tous les secteurs économiques du Sénégal</p>
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Secteurs d'Activité</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>ArchivPro intervient dans tous les secteurs économiques du Sénégal</p>
         </div>
       </section>
 
@@ -265,7 +265,7 @@ const Secteurs = () => {
       {/* BENEFITS SECTION */}
       <section className="secteurs-benefits">
         <div className="container">
-          <h2 data-aos="fade-down">Pourquoi ArchivPro pour votre secteur?</h2>
+          <h2 data-aos="fade-down" style={{ color: '#ffffff' }}>Pourquoi ArchivPro pour votre secteur?</h2>
           <div className="benefits-grid">
             <div className="benefit-card" data-aos="fade-up">
               <div className="benefit-icon">
@@ -316,8 +316,8 @@ const Secteurs = () => {
       {/* CTA FINAL */}
       <section className="secteurs-cta">
         <div className="cta-content">
-          <h2>Votre secteur n'est pas listé?</h2>
-          <p>Contactez-nous pour étudier une solution adaptée à votre domaine d'activité</p>
+          <h2 style={{ color: '#ffffff' }}>Votre secteur n'est pas listé?</h2>
+          <p style={{ color: '#ffffff' }}>Contactez-nous pour étudier une solution adaptée à votre domaine d'activité</p>
           <a href="/contact" className="btn-cta">Demander une consultation gratuite</a>
         </div>
       </section>

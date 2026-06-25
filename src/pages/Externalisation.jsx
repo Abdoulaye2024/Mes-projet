@@ -177,8 +177,8 @@ const Externalisation = () => {
     <div className="externalisation-page">
       <section className="externalisation-header" data-aos="fade-down">
         <div className="header-content">
-          <h1 className="header-title">Externalisation d'Archivage</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Externalisation d'Archivage</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Confiez vos archives à des professionnels et concentrez-vous sur votre cœur de métier avec nos services d'externalisation complète.
           </p>
         </div>
@@ -275,7 +275,7 @@ const Externalisation = () => {
               <div key={index} className="benefit-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-icon"><i className={item.icon}></i></div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p style={{ color: '#000000' }}>{item.description}</p>
               </div>
             ))}
           </div>

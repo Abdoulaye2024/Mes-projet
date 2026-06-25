@@ -1,8 +1,57 @@
-/* ===== PAGE NUMERISATION ===== */
+/* ==========================================
+   PAGE NUMERISATION - CHARTE GRAPHIQUE ANG ARCHIVAGE
+   Couleurs : #3199AE (teal), #4A4E82 (violet)
+   AUCUNE COULEUR OR / MARRON
+========================================== */
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+  --primary: #3199AE;
+  --primary-dark: #287F91;
+  --primary-light: #5BB8CD;
+  --primary-gradient: linear-gradient(135deg, #3199AE 0%, #287F91 100%);
+  
+  --secondary: #4A4E82;
+  --secondary-dark: #3C406B;
+  --secondary-light: #6B6FA8;
+  --secondary-gradient: linear-gradient(135deg, #4A4E82 0%, #3C406B 100%);
+  
+  --white: #FFFFFF;
+  --light: #F5F7FA;
+  --gray-100: #F5F7FA;
+  --gray-200: #E5EAF0;
+  --gray-300: #CBD5E0;
+  
+  --text: #2D3142;
+  --text-light: #6B7A8F;
+  --border: #E5EAF0;
+  
+  --shadow-sm: 0 2px 8px rgba(74, 78, 130, 0.06);
+  --shadow-md: 0 8px 30px rgba(74, 78, 130, 0.10);
+  --shadow-lg: 0 20px 60px rgba(74, 78, 130, 0.12);
+  --shadow-primary: 0 8px 30px rgba(49, 153, 174, 0.25);
+  --shadow-primary-hover: 0 15px 40px rgba(49, 153, 174, 0.30);
+  
+  --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+}
+
+/* ==========================================
+   PAGE PRINCIPALE
+========================================== */
 
 .numerisation-page {
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
 }
 
 .container {
@@ -11,31 +60,70 @@
   padding: 0 20px;
 }
 
-/* ===== ICON STYLES ===== */
+/* ==========================================
+   ICON STYLES
+========================================== */
 
 svg {
   display: inline-block;
 }
 
-/* ===== HEADER NUMERISATION ===== */
+/* ==========================================
+   HEADER NUMERISATION - TEAL/VIOLET
+========================================== */
 
 .numerisation-header {
-  background: linear-gradient(135deg, var(--gold-pale) 0%, #f0d9b5 100%);
-  color: white;
+  background: var(--secondary-gradient);
+  color: var(--white);
   padding: 80px 20px;
   text-align: center;
   margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.numerisation-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(49, 153, 174, 0.10) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatBlob 15s ease-in-out infinite;
+}
+
+.numerisation-header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatBlob 20s ease-in-out infinite reverse;
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
 .numerisation-header .header-content {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .numerisation-header .header-logo {
   height: 80px;
   margin-bottom: 30px;
   animation: bounce 2s infinite;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
 }
 
 @keyframes bounce {
@@ -44,10 +132,21 @@ svg {
 }
 
 .numerisation-header .header-title {
+  font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.numerisation-header .header-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-gradient);
+  margin: 1rem auto 0;
+  border-radius: 50px;
 }
 
 .numerisation-header .header-subtitle {
@@ -57,11 +156,13 @@ svg {
   line-height: 1.6;
 }
 
-/* ===== NUMERISATION INTRO ===== */
+/* ==========================================
+   NUMERISATION INTRO
+========================================== */
 
 .numerisation-intro {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: var(--light);
 }
 
 .numerisation-intro .container {
@@ -72,15 +173,27 @@ svg {
 }
 
 .numerisation-intro h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 30px;
   font-weight: 700;
+  position: relative;
+}
+
+.numerisation-intro h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-gradient);
+  margin-top: 10px;
+  border-radius: 50px;
 }
 
 .intro-text {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 20px;
   line-height: 1.8;
 }
@@ -92,25 +205,42 @@ svg {
 
 .intro-benefits li {
   padding: 12px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--gray-200);
   font-size: 1rem;
-  color: #333;
+  color: var(--text);
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.intro-benefits li::before {
+  content: '▸';
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .intro-benefits li strong {
-  color: #c9873a;
+  color: var(--primary);
   font-weight: 700;
 }
 
 .intro-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
 }
 
-/* ===== SECTION COMMON ===== */
+.intro-image img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-primary-hover);
+}
+
+/* ==========================================
+   SECTION TITRES COMMUNS
+========================================== */
 
 .numerisation-process h2,
 .document-types h2,
@@ -120,8 +250,9 @@ svg {
 .comparaison-solutions h2,
 .case-studies h2,
 .normes-numerisation h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
-  color: #1a2438;
+  color: var(--text);
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
@@ -129,17 +260,19 @@ svg {
 
 .section-subtitle {
   text-align: center;
-  color: #666;
+  color: var(--text-light);
   font-size: 1.2rem;
   margin-bottom: 50px;
   font-weight: 300;
 }
 
-/* ===== NUMERISATION PROCESS ===== */
+/* ==========================================
+   NUMERISATION PROCESS - TEAL
+========================================== */
 
 .numerisation-process {
   padding: 80px 20px;
-  background: white;
+  background: var(--white);
 }
 
 .process-steps {
@@ -150,19 +283,22 @@ svg {
 }
 
 .step {
-  background: #c9873a;
-  color: white;
+  background: var(--primary-gradient);
+  color: var(--white);
   padding: 40px 25px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
   position: relative;
+  border: 2px solid transparent;
 }
 
 .step:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.3);
+  box-shadow: var(--shadow-primary-hover);
+  border-color: var(--white);
+  background: var(--primary-dark);
 }
 
 .step-number {
@@ -180,7 +316,7 @@ svg {
 }
 
 .step-icon svg {
-  color: white;
+  color: var(--white);
   width: 28px;
   height: 28px;
 }
@@ -197,11 +333,13 @@ svg {
   line-height: 1.5;
 }
 
-/* ===== DOCUMENT TYPES ===== */
+/* ==========================================
+   DOCUMENT TYPES - TEAL
+========================================== */
 
 .document-types {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: var(--light);
 }
 
 .types-grid {
@@ -212,18 +350,20 @@ svg {
 }
 
 .type-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--white);
+  border-radius: var(--radius-md);
   padding: 35px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border-top: 4px solid #c9873a;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-top: 4px solid var(--primary);
+  border: 2px solid transparent;
 }
 
 .type-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.2);
+  box-shadow: var(--shadow-primary-hover);
+  border-color: var(--primary);
 }
 
 .type-icon {
@@ -234,44 +374,62 @@ svg {
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: rgba(201, 135, 58, 0.1);
+  background: rgba(49, 153, 174, 0.08);
   border-radius: 50%;
-  color: #c9873a;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.type-card:hover .type-icon {
+  background: rgba(49, 153, 174, 0.15);
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .type-icon svg {
-  color: #c9873a;
+  color: var(--primary);
   width: 40px;
   height: 40px;
 }
 
 .type-card h3 {
   font-size: 1.2rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 12px;
   font-weight: 700;
+  transition: var(--transition);
+}
+
+.type-card:hover h3 {
+  color: var(--primary);
 }
 
 .type-card p {
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 15px;
   font-size: 0.95rem;
 }
 
 .specs {
-  background: #f0f0f0;
+  background: rgba(49, 153, 174, 0.08);
   padding: 10px 15px;
   border-radius: 6px;
-  color: #c9873a;
+  color: var(--primary);
   font-weight: 600;
   font-size: 0.85rem;
+  transition: var(--transition);
 }
 
-/* ===== TECHNICAL SPECS ===== */
+.type-card:hover .specs {
+  background: rgba(49, 153, 174, 0.15);
+}
+
+/* ==========================================
+   TECHNICAL SPECS - TEAL
+========================================== */
 
 .technical-specs {
   padding: 80px 20px;
-  background: white;
+  background: var(--white);
 }
 
 .specs-grid {
@@ -282,19 +440,19 @@ svg {
 }
 
 .spec-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--white);
+  border-radius: var(--radius-md);
   padding: 40px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   border: 2px solid transparent;
 }
 
 .spec-card:hover {
-  border-color: #c9873a;
+  border-color: var(--primary);
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.2);
+  box-shadow: var(--shadow-primary-hover);
 }
 
 .spec-icon {
@@ -302,38 +460,45 @@ svg {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: #c9873a;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.spec-card:hover .spec-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .spec-icon svg {
-  color: #c9873a;
+  color: var(--primary);
 }
 
 .spec-card h3 {
   font-size: 1.3rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .spec-value {
   font-size: 2rem;
-  color: #c9873a;
+  color: var(--primary);
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .spec-desc {
-  color: #666;
+  color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* ===== BENEFITS ===== */
+/* ==========================================
+   BENEFITS - TEAL
+========================================== */
 
 .numerisation-benefits {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: var(--light);
 }
 
 .benefits-grid {
@@ -344,45 +509,59 @@ svg {
 }
 
 .benefit-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--white);
+  border-radius: var(--radius-md);
   padding: 35px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   position: relative;
+  border: 2px solid transparent;
 }
 
 .benefit-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.2);
+  box-shadow: var(--shadow-primary-hover);
+  border-color: var(--primary);
 }
 
 .benefit-number {
   display: inline-block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #c9873a;
+  color: var(--primary);
   margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-number {
+  transform: scale(1.1);
 }
 
 .benefit-card h3 {
   font-size: 1.3rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 15px;
   font-weight: 700;
+  transition: var(--transition);
+}
+
+.benefit-card:hover h3 {
+  color: var(--primary);
 }
 
 .benefit-card p {
-  color: #666;
+  color: var(--text-light);
   line-height: 1.7;
   font-size: 0.95rem;
 }
 
-/* ===== CAPACITES ===== */
+/* ==========================================
+   CAPACITES - TEAL
+========================================== */
 
 .capacites {
   padding: 80px 20px;
-  background: white;
+  background: var(--white);
 }
 
 .capacites-content {
@@ -393,18 +572,20 @@ svg {
 }
 
 .capacite-item {
-  background: #f8f9fa;
-  border-radius: 12px;
+  background: var(--light);
+  border-radius: var(--radius-md);
   padding: 30px;
   display: flex;
   gap: 20px;
-  transition: all 0.3s ease;
+  transition: var(--transition);
+  border: 2px solid transparent;
 }
 
 .capacite-item:hover {
-  background: white;
-  box-shadow: 0 10px 30px rgba(201, 135, 58, 0.1);
+  background: var(--white);
+  box-shadow: var(--shadow-primary-hover);
   transform: translateX(5px);
+  border-color: var(--primary);
 }
 
 .capacite-icon {
@@ -414,76 +595,94 @@ svg {
   width: 60px;
   height: 60px;
   min-width: 60px;
-  color: #c9873a;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.capacite-item:hover .capacite-icon {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .capacite-icon svg {
-  color: #c9873a;
+  color: var(--primary);
 }
 
 .capacite-text h3 {
   font-size: 1.2rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 10px;
   font-weight: 700;
   text-align: left;
+  transition: var(--transition);
+}
+
+.capacite-item:hover .capacite-text h3 {
+  color: var(--primary);
 }
 
 .capacite-text p {
-  color: #666;
+  color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.6;
   text-align: left;
 }
 
-/* ===== COMPARISON TABLE ===== */
+/* ==========================================
+   COMPARISON TABLE - TEAL
+========================================== */
 
 .comparaison-solutions {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: var(--light);
 }
 
 .comparison-table {
   overflow-x: auto;
   margin-top: 50px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
 
 .comparison-table table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: var(--white);
 }
 
 .comparison-table th {
-  background: #c9873a;
-  color: white;
+  background: var(--primary-gradient);
+  color: var(--white);
   padding: 20px;
   text-align: left;
   font-weight: 700;
-  border-bottom: 3px solid #c9873a;
+  border-bottom: 3px solid var(--primary);
 }
 
 .comparison-table td {
   padding: 18px 20px;
-  border-bottom: 1px solid #e0e0e0;
-  color: #555;
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--text-light);
+}
+
+.comparison-table tr {
+  transition: var(--transition);
 }
 
 .comparison-table tr:hover {
-  background: #f8f9fa;
+  background: rgba(49, 153, 174, 0.04);
 }
 
 .comparison-table tr:last-child td {
   border-bottom: none;
 }
 
-/* ===== CASE STUDIES ===== */
+/* ==========================================
+   CASE STUDIES - TEAL
+========================================== */
 
 .case-studies {
   padding: 80px 20px;
-  background: white;
+  background: var(--white);
 }
 
 .cases-grid {
@@ -494,17 +693,20 @@ svg {
 }
 
 .case-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--white);
+  border-radius: var(--radius-md);
   padding: 30px;
-  border-left: 5px solid #c9873a;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  border-left: 5px solid var(--primary);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  border-left-width: 5px;
 }
 
 .case-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.2);
+  box-shadow: var(--shadow-primary-hover);
+  border-color: var(--primary);
 }
 
 .case-header {
@@ -513,19 +715,24 @@ svg {
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--gray-100);
 }
 
 .case-header h3 {
-  color: #1a2438;
+  color: var(--text);
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0;
+  transition: var(--transition);
+}
+
+.case-card:hover .case-header h3 {
+  color: var(--primary);
 }
 
 .case-badge {
-  background: #c9873a;
-  color: white;
+  background: var(--primary-gradient);
+  color: var(--white);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -533,25 +740,27 @@ svg {
 }
 
 .case-detail {
-  color: #666;
+  color: var(--text-light);
   font-size: 0.95rem;
   margin-bottom: 10px;
   line-height: 1.5;
 }
 
 .case-result {
-  color: #c9873a;
+  color: var(--primary);
   font-size: 0.95rem;
   margin-top: 15px;
   line-height: 1.6;
   font-weight: 500;
 }
 
-/* ===== NORMES ===== */
+/* ==========================================
+   NORMES - TEAL
+========================================== */
 
 .normes-numerisation {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: var(--light);
 }
 
 .normes-grid {
@@ -562,21 +771,21 @@ svg {
 }
 
 .norme-card {
-  background: white;
-  border: 2px solid #c9873a;
-  border-radius: 12px;
+  background: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
   padding: 35px;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 .norme-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(201, 135, 58, 0.2);
-  background: #c9873a;
-  color: white;
-  border-color: white;
+  box-shadow: var(--shadow-primary-hover);
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary-dark);
 }
 
 .norme-icon {
@@ -586,32 +795,36 @@ svg {
   margin-bottom: 20px;
   width: 60px;
   height: 60px;
+  transition: var(--transition);
 }
 
 .norme-icon svg {
-  color: #c9873a;
-  transition: all 0.3s ease;
+  color: var(--primary);
+  transition: var(--transition);
 }
 
 .norme-card:hover .norme-icon svg {
-  color: white;
+  color: var(--white);
+  transform: scale(1.2);
 }
 
 .norme-card h3 {
   font-size: 1.3rem;
-  color: #1a2438;
+  color: var(--text);
   margin-bottom: 10px;
   font-weight: 700;
+  transition: var(--transition);
 }
 
 .norme-card:hover h3 {
-  color: white;
+  color: var(--white);
 }
 
 .norme-card p {
-  color: #666;
+  color: var(--text-light);
   margin-bottom: 10px;
   font-size: 0.95rem;
+  transition: var(--transition);
 }
 
 .norme-card:hover p {
@@ -624,16 +837,37 @@ svg {
   line-height: 1.6;
 }
 
-/* ===== CTA ===== */
+/* ==========================================
+   CTA - TEAL
+========================================== */
 
 .numerisation-cta {
   padding: 80px 20px;
-  background: #c9873a;
-  color: white;
+  background: var(--secondary-gradient);
+  color: var(--white);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.numerisation-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(49, 153, 174, 0.10) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.numerisation-cta .container {
+  position: relative;
+  z-index: 1;
 }
 
 .numerisation-cta h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -646,25 +880,27 @@ svg {
 }
 
 .cta-button {
-  background: white;
-  color: #c9873a;
+  background: var(--primary-gradient);
+  color: var(--white);
   border: none;
   padding: 16px 40px;
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  box-shadow: var(--shadow-primary);
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background: #f8f9fa;
+  box-shadow: var(--shadow-primary-hover);
+  background: var(--primary-dark);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ==========================================
+   RESPONSIVE - TABLETTE
+========================================== */
 
 @media (max-width: 768px) {
   .numerisation-header {
@@ -746,9 +982,17 @@ svg {
   }
 }
 
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
 @media (max-width: 480px) {
   .numerisation-header .header-title {
     font-size: 1.8rem;
+  }
+
+  .numerisation-header .header-logo {
+    height: 60px;
   }
 
   .numerisation-intro h2 {
@@ -778,4 +1022,30 @@ svg {
     padding: 12px 30px;
     font-size: 0.95rem;
   }
+}
+
+/* ==========================================
+   ANIMATIONS AOS
+========================================== */
+
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* ==========================================
+   SELECTION TEXTE
+========================================== */
+
+.numerisation-page ::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.numerisation-page ::-moz-selection {
+  background: var(--primary);
+  color: var(--white);
 }

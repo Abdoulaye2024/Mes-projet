@@ -198,8 +198,10 @@ const FAQ = () => {
       <section className="faq-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
-          <h1 className="header-title">Questions Fréquentes</h1>
-          <p className="header-subtitle">Trouvez réponses à vos questions sur nos services</p>
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Questions Fréquentes</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
+            Trouvez réponses à vos questions sur nos services
+          </p>
         </div>
       </section>
 
@@ -318,8 +320,8 @@ const FAQ = () => {
       {/* CTA FINAL */}
       <section className="faq-cta">
         <div className="cta-content">
-          <h2>Prêt à commencer?</h2>
-          <p>Démarrez avec notre audit diagnostique gratuit, sans engagement</p>
+          <h2 style={{ color: '#ffffff' }}>Prêt à commencer?</h2>
+          <p style={{ color: '#ffffff' }}>Démarrez avec notre audit diagnostique gratuit, sans engagement</p>
           <a href="/contact" className="btn-cta">Demander un audit gratuit</a>
         </div>
       </section>

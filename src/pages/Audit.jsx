@@ -177,8 +177,8 @@ const Audit = () => {
     <div className="audit-page">
       <section className="audit-header" data-aos="fade-down">
         <div className="header-content">
-          <h1 className="header-title">Audit d'Archives</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Audit d'Archives</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Évaluez la conformité et l'efficacité de vos archives avec nos audits spécialisés, pour une gestion documentaire optimale et sécurisée.
           </p>
         </div>
@@ -188,7 +188,9 @@ const Audit = () => {
         <div className="container audit-grid">
           <div>
             <h2>Un audit d'archives pour maîtriser vos risques</h2>
-            <p className="section-subtitle">L'audit permet d'évaluer la qualité de votre gestion documentaire et d'identifier les axes d'amélioration.</p>
+            <p className="section-subtitle" style={{ color: '#ffffff' }}>
+              L'audit permet d'évaluer la qualité de votre gestion documentaire et d'identifier les axes d'amélioration.
+            </p>
             <ul className="audit-intro-list">
               <li><strong>Évaluation personnalisée</strong> de vos besoins en audit d'archives.</li>
               <li><strong>Processus méthodique</strong> avec analyse approfondie et recommandations précises.</li>
@@ -275,7 +277,7 @@ const Audit = () => {
               <div key={index} className="benefit-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-icon"><i className={item.icon}></i></div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p style={{ color: '#000000' }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -292,7 +294,7 @@ const Audit = () => {
                 <h3>{item.title}</h3>
                 <p>{item.challenge}</p>
                 <p>{item.result}</p>
-                <span className="case-badge">{item.badge}</span>
+                <span className="case-badge" style={{ backgroundColor: '#287F91' }}>{item.badge}</span>
               </div>
             ))}
           </div>

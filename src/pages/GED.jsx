@@ -177,8 +177,8 @@ const GED = () => {
     <div className="ged-page">
       <section className="ged-header" data-aos="fade-down">
         <div className="header-content">
-          <h1 className="header-title">Gestion Électronique des Documents (GED)</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Gestion Électronique des Documents (GED)</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Maîtrisez la circulation de vos documents, sécurisez vos informations et automatisez vos processus avec une GED Alfresco adaptée à votre organisation.
           </p>
         </div>
@@ -275,7 +275,7 @@ const GED = () => {
               <div key={index} className="benefit-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="card-icon"><i className={item.icon}></i></div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p style={{ color: '#000000' }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -292,7 +292,7 @@ const GED = () => {
                 <h3>{item.title}</h3>
                 <p>{item.challenge}</p>
                 <p>{item.result}</p>
-                <span className="case-badge">{item.badge}</span>
+                <span className="case-badge" style={{ backgroundColor: '#287F91' }}>{item.badge}</span>
               </div>
             ))}
           </div>

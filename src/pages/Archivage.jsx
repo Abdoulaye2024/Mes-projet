@@ -145,8 +145,8 @@ const Archivage = () => {
       <section className="archivage-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="Archivage" className="header-logo" />
-          <h1 className="header-title">Solutions d'Archivage Professionnel</h1>
-          <p className="header-subtitle">
+          <h1 className="header-title" style={{ color: '#ffffff' }}>Solutions d'Archivage Professionnel</h1>
+          <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Sécurisez votre patrimoine documentaire avec nos solutions d'archivage adaptées à vos besoins
           </p>
         </div>
@@ -161,11 +161,11 @@ const Archivage = () => {
               L'archivage professionnel n'est pas une simple conservation. C'est une stratégie complète pour :
             </p>
             <ul className="intro-benefits">
-              <li><strong>Protéger</strong> votre patrimoine informationnel</li>
-              <li><strong>Optimiser</strong> votre espace de travail</li>
-              <li><strong>Assurer</strong> la conformité légale</li>
-              <li><strong>Faciliter</strong> l'accès aux informations</li>
-              <li><strong>Économiser</strong> sur vos frais de gestion</li>
+              <li><strong style={{ color: '#287F91' }}>Protéger</strong> votre patrimoine informationnel</li>
+              <li><strong style={{ color: '#287F91' }}>Optimiser</strong> votre espace de travail</li>
+              <li><strong style={{ color: '#287F91' }}>Assurer</strong> la conformité légale</li>
+              <li><strong style={{ color: '#287F91' }}>Faciliter</strong> l'accès aux informations</li>
+              <li><strong style={{ color: '#287F91' }}>Économiser</strong> sur vos frais de gestion</li>
             </ul>
           </div>
           <div className="intro-image" data-aos="zoom-in">
@@ -347,37 +347,37 @@ const Archivage = () => {
           <p className="section-subtitle">Étapes clés pour garantir la qualité</p>
 
           <div className="process-steps">
-            <div className="step" data-aos="zoom-in" data-aos-delay="0">
+            <div className="step" data-aos="zoom-in" data-aos-delay="0" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">1</div>
               <h3>Diagnostic</h3>
               <p>Analyse de vos besoins et de vos documents</p>
             </div>
 
-            <div className="step" data-aos="zoom-in" data-aos-delay="100">
+            <div className="step" data-aos="zoom-in" data-aos-delay="100" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">2</div>
               <h3>Préparation</h3>
               <p>Classement et tri des documents</p>
             </div>
 
-            <div className="step" data-aos="zoom-in" data-aos-delay="200">
+            <div className="step" data-aos="zoom-in" data-aos-delay="200" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">3</div>
               <h3>Exécution</h3>
               <p>Archivage ou numérisation</p>
             </div>
 
-            <div className="step" data-aos="zoom-in" data-aos-delay="300">
+            <div className="step" data-aos="zoom-in" data-aos-delay="300" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">4</div>
               <h3>Indexation</h3>
               <p>Référencement et métadonnées</p>
             </div>
 
-            <div className="step" data-aos="zoom-in" data-aos-delay="400">
+            <div className="step" data-aos="zoom-in" data-aos-delay="400" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">5</div>
               <h3>Stockage Sécurisé</h3>
               <p>Conservation en locaux ou serveurs</p>
             </div>
 
-            <div className="step" data-aos="zoom-in" data-aos-delay="500">
+            <div className="step" data-aos="zoom-in" data-aos-delay="500" style={{ backgroundColor: '#5BB8CD' }}>
               <div className="step-number">6</div>
               <h3>Support Continu</h3>
               <p>Maintenance et gestion long terme</p>
@@ -403,7 +403,7 @@ const Archivage = () => {
                 <div className="case-image">
                   <img src={caseItem.image} alt={caseItem.client} />
                   <div className="case-overlay">
-                    <span className="case-badge">Cas de Succès</span>
+                    <span className="case-badge" style={{ backgroundColor: '#287F91' }}>Cas de Succès</span>
                   </div>
                 </div>
                 <div className="case-content">
@@ -456,7 +456,7 @@ const Archivage = () => {
         <div className="container">
           <h2>Prêt à transformer votre gestion documentaire ?</h2>
           <p>Nous vous proposons un diagnostic gratuit et sans engagement</p>
-          <button className="cta-button" onClick={() => window.location.href = '/contact'}>
+          <button className="cta-button" onClick={() => window.location.href = '/contact'} style={{ backgroundColor: '#287F91' }}>
             Demander un Devis Gratuit
           </button>
         </div>
