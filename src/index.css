@@ -795,7 +795,7 @@ a {
 
 .secteur-icon {
   font-size: 2.5rem;
-  color: var(--primary) !important;  /* Teal pour les icônes */
+  /* color: var(--primary) !important;  Teal pour les icônes */
   margin-bottom: 0.6rem;
   transition: var(--transition);
   display: block;
@@ -803,7 +803,7 @@ a {
 
 .secteur-tag:hover .secteur-icon {
   transform: scale(1.15) rotate(-5deg);
-  color: var(--primary-dark) !important;
+  /* color: var(--primary-dark) !important; */
 }
 
 .secteur-name {
