@@ -265,7 +265,7 @@ const Secteurs = () => {
       {/* BENEFITS SECTION */}
       <section className="secteurs-benefits">
         <div className="container">
-          <h2 data-aos="fade-down" style={{ color: '#ffffff' }}>Pourquoi ArchivPro pour votre secteur?</h2>
+          <h2 data-aos="fade-down" style={{ color: '#000' }}>Pourquoi ArchivPro pour votre secteur?</h2>
           <div className="benefits-grid">
             <div className="benefit-card" data-aos="fade-up">
               <div className="benefit-icon">

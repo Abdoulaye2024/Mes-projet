@@ -3,6 +3,31 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const BASE = import.meta.env.BASE_URL;
+const partnerLogos = [
+  ['A-I-B-D', 'A-I-B-D.png'],
+  ['Africa Bank', 'africa-bank.png'],
+  ['Amnesty', 'amnesty.png'],
+  ['BIPA', 'BIPA.png'],
+  ['C-S-E', 'C-S-E.png'],
+  ['Carte Brune', 'carte-brune.png'],
+  ['F-O-N-G-I-P', 'F-O-N-G-I-P.png'],
+  ['Groupe Kirene', 'groupe-kirene.png'],
+  ['HOGIP', 'HOGIP.jpg'],
+  ['I-D-E-P', 'I-D-E-P.png'],
+  ['KPMG', 'KPMG.png'],
+  ['L-C-S', 'L-C-S.png'],
+  ['L-M-B-D', 'L-M-B-D.png'],
+  ['La Providence', 'la providence.png'],
+  ['M-S-A', 'M-S-A.jpg'],
+  ['Notaire', 'notaire.png'],
+  ['P-M-N', 'P-M-N.png'],
+  ['S-A', 'S-A.png'],
+  ['Sedima', 'sedima.png'],
+  ['Senegal', 'senegal.jpg'],
+  ['Total Energie', 'total-energie.png'],
+  ['Touba Oil', 'touba-oil.png'],
+  ['U-A-M', 'U-A-M.png'],
+];
 
 function Home() {
   const toggleDropdown = (element) => {
@@ -15,7 +40,7 @@ function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // handle form submission
+    
   };
 
   useEffect(() => {
@@ -38,8 +63,8 @@ function Home() {
           Vos documents,<br /><em>protégés et accessibles</em><br />au Sénégal.
         </h1>
         <p className="hero-sub">
-          ArchivPro est la référence en gestion documentaire à Dakar. Nous prenons en charge l'archivage physique, la
-          numérisation, la GED et la destruction sécurisée de vos documents d'entreprise.
+          Le Cabinet ANG Archivage est la référence en gestion documentaire. Nous prenons en charge l'archivage physique, la
+          numérisation et la GED, la mise en place de SAE (Systeme d'Archivage Electronique), l'aménagement de vos salles d'archives, la fourniture de royannages de qualité, et la destruction sécurisée de vos documents. d'entreprise.
         </p>
         <div className="hero-actions">
           <a href="#contact" className="btn-primary">Demander un devis gratuit →</a>
@@ -93,7 +118,7 @@ function Home() {
             <span className="service-num">01 / 04</span>
             <div className="service-icon"><img src={`${BASE}image/Archivage physique.png`} className="imgCard" alt="" /></div>
             <div className="service-name">Archivage physique</div>
-            <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts à Dakar, avec contrôle
+            <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts, avec contrôle
               d'accès, gestion des durées de conservation et inventaire complet.</p>
             <ul className="service-features">
               <li>Entrepôt sécurisé et climatisé</li>
@@ -152,7 +177,7 @@ function Home() {
           <div className="service-card">
             <span className="service-num">05 / 06</span>
             <div className="service-icon"><img src={`${BASE}image/Audit_Conseil.jpg`} className="imgCard" alt="Audit et Conseil" /></div>
-            <div className="service-name">Audit et Conseil en Archivage</div>
+            <div className="service-name">Audit et Conseil</div>
             <p className="service-desc">Évaluation complète de vos systèmes d'archivage existants avec recommandations
               personnalisées pour optimiser la gestion documentaire.</p>
             <ul className="service-features">
@@ -168,7 +193,7 @@ function Home() {
             <span className="service-num">06 / 06</span>
             <div className="service-icon"><img src={`${BASE}image/Externalisation_Archivage.jpg`} className="imgCard" alt="Externalisation" />
             </div>
-            <div className="service-name">Externalisation de l'Archivage</div>
+            <div className="service-name">Externalisation des Archives</div>
             <p className="service-desc">Prise en charge complète de vos archives physiques et numériques pour réduire les coûts
               internes et sécuriser vos documents sensibles.</p>
             <ul className="service-features">
@@ -185,39 +210,25 @@ function Home() {
 
       <section id="partenaires">
         <p className="section-label" style={{ fontWeight: 'bold' }}>Nos partenaires</p>
-        <h2 className="section-title">Nos clients de <em>confiance</em></h2>
+        <h2 className="section-title">Ils nous font <em>confiance</em></h2>
         <div className="partenaires-container">
           <div className="partenaires-track">
-            <div className="partenaire-logo"><img src={`${BASE}logo/A-I-B-D.png`} alt="A-I-B-D" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/africa-bank.png`} alt="Africa Bank" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/amnesty.png`} alt="Amnesty" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/BIPA.png`} alt="BIPA" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/C-S-E.png`} alt="C-S-E" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/carte-brune.png`} alt="Carte Brune" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/F-O-N-G-I-P.png`} alt="F-O-N-G-I-P" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/groupe-kirene.png`} alt="Groupe Kirene" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/HOGIP.jpg`} alt="HOGIP" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/I-D-E-P.png`} alt="I-D-E-P" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/KPMG.png`} alt="KPMG" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/L-C-S.png`} alt="L-C-S" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/L-M-B-D.png`} alt="L-M-B-D" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/la providence.png`} alt="La Providence" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/M-S-A.jpg`} alt="M-S-A" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/notaire.png`} alt="Notaire" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/P-M-N.png`} alt="P-M-N" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/S-A.png`} alt="S-A" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/sedima.png`} alt="Sedima" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/senegal.jpg`} alt="Senegal" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/total-energie.png`} alt="Total Energie" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/touba-oil.png`} alt="Touba Oil" /></div>
-            <div className="partenaire-logo"><img src={`${BASE}logo/U-A-M.png`} alt="U-A-M" /></div>
+            {[false, true].map((isDuplicate) => (
+              <div className="partenaires-groupe" aria-hidden={isDuplicate || undefined} key={String(isDuplicate)}>
+                {partnerLogos.map(([name, file]) => (
+                  <div className="partenaire-logo" key={name}>
+                    <img src={`${BASE}logo/${file}`} alt={isDuplicate ? '' : name} />
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="pourquoi">
         <p className="section-label" style={{ color: '#287F91', fontWeight: 'bold' }}>Nos engagements</p>
-        <h2 className="section-title section-title-light">Pourquoi les entreprises<br />de Dakar nous <em>choisissent</em></h2>
+        <h2 className="section-title section-title-light">Pourquoi <br />nous <em>choisir ?</em></h2>
         <div className="why-grid">
           <div className="why-list">
             <div className="why-item">
@@ -532,7 +543,7 @@ function Home() {
                 <div className="contact-item-icon"><i className="fas fa-map-marker-alt"></i></div>
                 <div>
                   <div className="contact-item-label" style={{ color: '#287F91' }}>Adresse</div>
-                  <div className="contact-item-value" style={{ color: '#287F91' }}>Plateau, Dakar<br />Sénégal</div>
+                  <div className="contact-item-value" style={{ color: '#287F91' }}>Diamniadio<br />Dakar-Sénégal</div>
                 </div>
               </div>
 
@@ -549,7 +560,7 @@ function Home() {
                 <div>
                   <div className="contact-item-label" style={{ color: '#287F91' }}>Email</div>
                   <div className="contact-item-value" style={{ color: '#287F91' }}>
-                    <a href="mailto:contact@archivpro.sn" style={{ color: '#287F91', textDecoration: 'none' }}>contact@archivpro.sn</a>
+                    <a href="mailto:contact@archivpro.sn" style={{ color: '#287F91', textDecoration: 'none' }}>ang.archivage@gmail.com</a>
                   </div>
                 </div>
               </div>

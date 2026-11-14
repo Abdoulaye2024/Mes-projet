@@ -116,19 +116,19 @@ const Archivage = () => {
       client: "IDEP (Institut de Développement Économique)",
       project: "Numérisation massive 534 000 pages",
       results: "Digitalisation complète, recherche instantanée, gain de productivité 60%",
-      image: `${BASE}image/archive_img.png`
+      image: `image/archive_img.png`
     },
     {
       client: "FONGIP (Fonds de Garantie)",
       project: "Archivage des dossiers clients 10 ans",
       results: "Conformité légale, traçabilité totale, gain d'espace 80%",
-      image: `${BASE}image/archive_img2.png`
+      image: `image/archive_img2.png`
     },
     {
       client: "Assurances Providence",
       project: "GED avec workflows automatisés",
       results: "Processus de traitement accélérés, satisfaction clients améliorée",
-      image: `${BASE}image/Audit_Conseil.jpg`
+      image: `image/Audit_Conseil.jpg`
     }
   ];
 

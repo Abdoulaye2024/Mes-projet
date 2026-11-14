@@ -46,8 +46,8 @@ const Contact = () => {
       id: 1,
       type: "Email",
       icon: "fas fa-envelope",
-      value: "contact@ang-archivage.sn",
-      link: "mailto:contact@ang-archivage.sn",
+      value: "ang.archivage@gmail.com",
+      link: "mailto:ang.archivage@gmail.com",
       label: "Contactez-nous par email"
     },
     {
@@ -62,7 +62,7 @@ const Contact = () => {
       id: 3,
       type: "Téléphone",
       icon: "fas fa-phone",
-      value: "+221 188 55 12",
+      value: "+221 76 188 55 12",
       link: "tel:+2211885512",
       label: "Appelez-nous"
     },
@@ -70,7 +70,7 @@ const Contact = () => {
       id: 4,
       type: "Localisation",
       icon: "fas fa-map-marker-alt",
-      value: "Dakar, Sénégal",
+      value: "Diamniadio, Sénégal",
       link: "#",
       label: "Visitez-nous"
     }

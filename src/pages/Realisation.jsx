@@ -263,7 +263,7 @@ const Stats = () => {
         documents: prev.documents < 500000 ? prev.documents + 15000 : 500000,
         projects: prev.projects < 15 ? prev.projects + 0.5 : 15,
         storage: prev.storage < 3500 ? prev.storage + 100 : 3500,
-        years: prev.years < 9 ? prev.years + 0.3 : 9,
+        years: prev.years < 10 ? prev.years + 0.3 : 10,
       }));
     }, 20);
 
@@ -285,7 +285,7 @@ const Stats = () => {
         <p>Mètres linéaires</p>
       </div>
       <div className="stat" data-aos="zoom-in" data-aos-delay="300">
-        <h3>{Math.round(counts.years)}</h3>
+        <h3>{Math.round(counts.years)}+</h3>
         <p>Années d'expérience</p>
       </div>
     </div>

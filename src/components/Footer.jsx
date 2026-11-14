@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-brand">
           <div className="footer-logo">
-            Archiv<span>Pro</span>
+            ANG <span>ARCHIVAGE</span>
           </div>
           <p className="footer-tagline">
             Cabinet d'archivage professionnel à Dakar. La référence en gestion

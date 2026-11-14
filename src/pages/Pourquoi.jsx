@@ -55,7 +55,7 @@ const Pourquoi = () => {
       <section className="propos-header" data-aos="fade-down">
         <div className="header-content">
           <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
-          <h1 className="header-title" style={{ color: '#ffffff' }}>À Propos de ArchivPro</h1>
+          <h1 className="header-title" style={{ color: '#ffffff' }}>À Propos de ANG ARCHIVAGE</h1>
           <p className="header-subtitle" style={{ color: '#ffffff' }}>La référence de l'archivage professionnel au Sénégal</p>
         </div>
       </section>
@@ -65,8 +65,8 @@ const Pourquoi = () => {
         <div className="container">
           <div className="logo-section" data-aos="zoom-in">
             <div className="logo-box">
-              <div className="logo-text">Archiv<span>Pro</span></div>
-              <div className="logo-badge">Dakar</div>
+              <div className="logo-text">ANG <span>ARCHIVAGE</span></div>
+             
             </div>
           </div>
 
@@ -90,7 +90,7 @@ const Pourquoi = () => {
       {/* HISTOIRE */}
       <section className="histoire" data-aos="fade-up">
         <div className="container">
-          <h2 data-aos="fade-down">L'Histoire de ArchivPro</h2>
+          <h2 data-aos="fade-down">L'Histoire de ANG ARCHIVAGE</h2>
 
           <div className="timeline">
             <div className="timeline-item" data-aos="fade-right">
