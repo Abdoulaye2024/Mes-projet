@@ -308,52 +308,63 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+  gap: 12px;
 }
 
+/* ==========================================
+   LOGO CARTE - AGRANDI ET EN COULEUR
+========================================== */
+
 .card-header .logo {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--light);
-  border-radius: var(--radius-sm);
-  padding: 8px;
+  border-radius: var(--radius-md);
+  padding: 10px;
   transition: var(--transition);
+  border: 1px solid var(--gray-200);
 }
 
 .card:hover .card-header .logo {
-  background: rgba(49, 153, 174, 0.05);
+  background: rgba(49, 153, 174, 0.06);
+  border-color: rgba(49, 153, 174, 0.2);
 }
 
 .card-header .logo img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
+  /* COULEUR PLEINE - PLUS DE GRIS/BLANC */
+  filter: none;
+  opacity: 1;
   transition: var(--transition);
 }
 
 .card:hover .card-header .logo img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 .mission-type {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 14px;
   background: rgba(49, 153, 174, 0.08);
   color: var(--primary);
   border-radius: 20px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .card h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text);
   margin-bottom: 8px;
   font-weight: 700;
@@ -437,6 +448,12 @@
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card-header .logo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
 }
 
 /* ==========================================
@@ -512,8 +529,19 @@
   }
 
   .card-header .logo {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    padding: 8px;
+  }
+
+  .card-header {
+    gap: 10px;
+  }
+
+  .mission-type {
+    font-size: 0.7rem;
+    padding: 4px 10px;
   }
 }
 
@@ -547,8 +575,16 @@
     font-size: 1rem;
   }
 
+  .card-header .logo {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    padding: 6px;
+  }
+
   .mission-type {
     font-size: 0.6rem;
+    padding: 3px 8px;
   }
 }
 

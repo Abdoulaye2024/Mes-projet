@@ -10,7 +10,6 @@ function Navbar() {
       {/* LOGO */}
       <Link className="navbar-brand" to="/">
         <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar Logo" className="navbar-logo" />
-        {/* <img src="image/logo-archive.png" className="imgCard" alt="" /> */}
       </Link>
 
       {/* MOBILE BUTTON */}
@@ -31,7 +30,7 @@ function Navbar() {
             <Link className="nav-link" to="/">Accueil</Link>
           </li>
 
-          {/* DROPDOWN */}
+          {/* DROPDOWN SERVICES */}
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -44,21 +43,22 @@ function Navbar() {
             </a>
 
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to="/archivage" >Archivage</Link></li> {/*to="/archivage"*/}
-              <li><Link className="dropdown-item" to="/numerisation">Numérisation</Link></li>  {/*to="/numerisation"*/}
-              <li><Link className="dropdown-item" to="/ged">GED</Link></li> {/*to="/ged"*/}
-              <li><Link className="dropdown-item" to="/destruction">Destruction</Link></li> {/*to="/destruction"*/}
-              <li><Link className="dropdown-item" to="/audit">Audit</Link></li> {/*to="/audit"*/}
-              <li><Link className="dropdown-item" to="/externalisation" >Externalisation</Link></li> {/*to="/externalisation"*/}
+              <li><Link className="dropdown-item" to="/archivage">Archivage</Link></li>
+              <li><Link className="dropdown-item" to="/numerisation">Numérisation</Link></li>
+              <li><Link className="dropdown-item" to="/ged">GED</Link></li>
+              <li><Link className="dropdown-item" to="/destruction">Destruction</Link></li>
+              <li><Link className="dropdown-item" to="/audit">Audit</Link></li>
+              <li><Link className="dropdown-item" to="/externalisation">Externalisation</Link></li>
             </ul>
           </li>
 
+          {/* ✅ ANCRES VERS HOME (secteurs, processus, faq) */}
           <li className="nav-item">
-            <Link className="nav-link" to="/secteurs">Secteurs</Link>
+            <Link className="nav-link" to="/#secteurs">Secteurs</Link>
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/processus">Méthode</Link>
+            <Link className="nav-link" to="/#processus">Méthode</Link>
           </li>
 
           <li className="nav-item">
@@ -66,10 +66,10 @@ function Navbar() {
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/faq">FAQ</Link>
+            <Link className="nav-link" to="/#faq">FAQ</Link>
           </li>
 
-           <li className="nav-item">
+          <li className="nav-item">
             <Link className="nav-link" to="/pourquoi">À propos</Link>
           </li>
 

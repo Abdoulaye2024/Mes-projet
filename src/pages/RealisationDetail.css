@@ -2,6 +2,7 @@
    PAGE DETAIL REALISATION - CHARTE GRAPHIQUE ANG ARCHIVAGE
    Couleurs : #3199AE (teal), #4A4E82 (violet)
    AUCUNE COULEUR OR / MARRON - 100% TEAL/VIOLET
+   TITRES GRAS + LOGOS EN COULEUR + LISIBILITÉ MAXIMALE
 ========================================== */
 
 /* ==========================================
@@ -68,11 +69,11 @@
   align-items: center;
   gap: 8px;
   color: var(--primary);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: var(--transition);
   margin-bottom: 30px;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .back-link:hover {
@@ -93,6 +94,7 @@
   font-size: 2rem;
   color: var(--text);
   font-family: 'Playfair Display', serif;
+  font-weight: 800;
 }
 
 /* ==========================================
@@ -102,9 +104,9 @@
 .detail-header {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   background: var(--white);
-  padding: 35px 40px;
+  padding: 40px 45px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   margin-bottom: 40px;
@@ -117,77 +119,94 @@
   box-shadow: var(--shadow-primary-hover);
 }
 
+/* ==========================================
+   LOGO HEADER - GRAND, EN COULEUR, LISIBLE
+========================================== */
+
 .header-logo {
-  width: 120px;
-  height: 120px;
-  min-width: 120px;
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--light);
+  background: var(--white);
   border-radius: var(--radius-md);
   padding: 15px;
   transition: var(--transition);
+  border: 2px solid var(--gray-200);
 }
 
 .detail-header:hover .header-logo {
-  background: rgba(49, 153, 174, 0.05);
+  background: var(--white);
+  border-color: rgba(49, 153, 174, 0.35);
 }
 
 .header-logo img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
+  /* COULEUR PLEINE - PLUS DE GRIS/BLANC */
+  filter: none;
+  opacity: 1;
   transition: var(--transition);
 }
 
 .detail-header:hover .header-logo img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 .header-info {
   flex: 1;
 }
 
+/* TITRE PRINCIPAL - TRÈS GRAS ET LISIBLE */
 .header-info h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  font-weight: 800;
   color: var(--text);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 
 .header-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .badge {
   display: inline-block;
-  padding: 5px 14px;
+  padding: 7px 18px;
   border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .badge-type {
-  background: rgba(49, 153, 174, 0.08);
-  color: var(--primary);
+  background: var(--primary-gradient);  
+  color: var(--white);                   
+  font-weight: 800;                     
+  font-size: 0.9rem;                    
 }
 
 .badge-year {
-  background: rgba(74, 78, 130, 0.08);
-  color: var(--secondary);
+  background: var(--secondary-gradient); 
+  color: var(--white);                   
+  font-weight: 800;
 }
 
 .badge-date {
-  background: var(--gray-100);
-  color: var(--text-light);
+  background: orange;             
+  color: var(--white);                   
+  border: 2px solid var(--gray-300);     
+  font-weight: 800;
 }
 
 /* ==========================================
@@ -212,7 +231,7 @@
 
 .section {
   background: var(--white);
-  padding: 30px 35px;
+  padding: 35px 40px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
@@ -224,13 +243,16 @@
   box-shadow: var(--shadow-md);
 }
 
+/* TITRES DE SECTION - TRÈS GRAS ET LISIBLES */
 .section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
+  font-weight: 800;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 22px;
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
+  letter-spacing: -0.3px;
 }
 
 .section h2::after {
@@ -238,24 +260,27 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50px;
-  height: 3px;
+  width: 70px;
+  height: 4px;
   background: var(--primary-gradient);
   border-radius: 50px;
 }
 
+/* TEXTE MISSION - GRAND, GRAS ET LISIBLE */
 .mission-text {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--text);
   line-height: 1.8;
-  margin-bottom: 12px;
-  font-weight: 500;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
+/* TEXTE DESCRIPTION - PLUS GRAND ET LISIBLE */
 .description-text {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text-light);
-  line-height: 1.8;
+  line-height: 1.9;
+  font-weight: 400;
 }
 
 /* ==========================================
@@ -268,22 +293,25 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 14px;
 }
 
 .services-list li {
-  padding: 10px 14px;
-  background: rgba(49, 153, 174, 0.04);
+  padding: 14px 18px;
+  background: rgba(49, 153, 174, 0.06);
   border-radius: var(--radius-sm);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text);
+  font-weight: 600;
   transition: var(--transition);
-  border-left: 3px solid var(--primary);
+  border-left: 4px solid var(--primary);
+  line-height: 1.5;
 }
 
 .services-list li:hover {
-  background: rgba(49, 153, 174, 0.08);
+  background: rgba(49, 153, 174, 0.12);
   transform: translateX(5px);
+  color: var(--primary-dark);
 }
 
 /* ==========================================
@@ -293,17 +321,17 @@
 .achievements-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 16px;
 }
 
 .achievement-item {
   background: var(--light);
-  padding: 16px 20px;
+  padding: 20px 24px;
   border-radius: var(--radius-sm);
   transition: var(--transition);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   border: 2px solid transparent;
 }
 
@@ -315,15 +343,16 @@
 }
 
 .achievement-icon {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   flex-shrink: 0;
 }
 
 .achievement-item p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--text);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 /* ==========================================
@@ -338,7 +367,7 @@
 
 .sidebar-card {
   background: var(--white);
-  padding: 25px 30px;
+  padding: 30px 32px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
@@ -350,17 +379,20 @@
   box-shadow: var(--shadow-primary-hover);
 }
 
+/* TITRES SIDEBAR - GRAS ET LISIBLES */
 .sidebar-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
+  font-weight: 800;
   color: var(--text);
-  margin-bottom: 18px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--gray-100);
+  margin-bottom: 22px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--gray-200);
+  letter-spacing: -0.2px;
 }
 
 .detail-item {
-  padding: 10px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--gray-100);
 }
 
@@ -368,36 +400,42 @@
   border-bottom: none;
 }
 
+/* LABELS - PLUS LISIBLES ET GRAS */
 .detail-item label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   color: var(--text-light);
-  font-weight: 600;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
+/* VALEURS - PLUS GRANDES ET GRASSES */
 .detail-item p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text);
-  margin: 4px 0 0;
-  font-weight: 500;
+  margin: 5px 0 0;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .detail-item.highlight {
-  background: rgba(49, 153, 174, 0.04);
-  margin: 0 -15px;
-  padding: 12px 15px;
+  background: rgba(49, 153, 174, 0.08);
+  margin: 0 -18px;
+  padding: 16px 18px;
   border-radius: var(--radius-sm);
 }
 
 .detail-item.highlight label {
-  color: var(--primary);
+  color: var(--primary-dark);
+  font-weight: 900;
 }
 
 .detail-item.highlight p {
   color: var(--primary-dark);
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
 
 /* ==========================================
@@ -418,25 +456,26 @@
 
 .sidebar-card.cta h3 {
   color: var(--white);
-  border-bottom-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: rgba(255, 255, 255, 0.20);
 }
 
 .sidebar-card.cta p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 16px 30px;
   background: var(--primary-gradient);
   color: var(--white);
   border: none;
   border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 800;
+  font-size: 1.05rem;
   text-decoration: none;
   transition: var(--transition);
   box-shadow: var(--shadow-primary);
@@ -468,9 +507,9 @@
   }
 
   .header-logo {
-    width: 100px;
-    height: 100px;
-    min-width: 100px;
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
   }
 
   .header-meta {
@@ -478,7 +517,7 @@
   }
 
   .header-info h1 {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
 
   .services-list {
@@ -515,39 +554,43 @@
   }
 
   .header-logo {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
   }
 
   .header-info h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .header-meta {
-    gap: 6px;
+    gap: 8px;
   }
 
   .badge {
-    font-size: 0.7rem;
-    padding: 4px 10px;
+    font-size: 0.8rem;
+    padding: 5px 12px;
   }
 
   .section {
-    padding: 20px 20px;
+    padding: 22px 20px;
   }
 
   .section h2 {
-    font-size: 1.3rem;
+    font-size: 1.55rem;
   }
 
   .mission-text {
+    font-size: 1.1rem;
+  }
+
+  .description-text {
     font-size: 1rem;
   }
 
   .services-list li {
-    font-size: 0.85rem;
-    padding: 8px 12px;
+    font-size: 0.95rem;
+    padding: 12px 15px;
   }
 
   .achievements-grid {
@@ -555,21 +598,29 @@
   }
 
   .achievement-item {
-    padding: 12px 16px;
+    padding: 15px 18px;
+  }
+
+  .achievement-item p {
+    font-size: 0.95rem;
   }
 
   .sidebar-card {
-    padding: 20px;
+    padding: 22px;
     min-width: 100%;
   }
 
+  .sidebar-card h3 {
+    font-size: 1.25rem;
+  }
+
   .detail-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 13px 20px;
   }
 }
 
@@ -583,26 +634,47 @@
   }
 
   .header-logo {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
     padding: 10px;
   }
 
   .header-info h1 {
-    font-size: 1.2rem;
+    font-size: 1.45rem;
   }
 
   .section {
-    padding: 16px 15px;
+    padding: 18px 16px;
   }
 
   .section h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+  }
+
+  .description-text {
+    font-size: 0.95rem;
   }
 
   .back-link {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .detail-item p {
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
   }
 }
 

@@ -1,13 +1,8 @@
 // ─────────────────────────────────────────────────────────────
 // BASE URL des images
-// En local      → ""          (vide, chemin = /image/...)
-// Sur GitHub    → "/Mes-projet" (chemin = /Mes-projet/image/...)
-// import.meta.env.BASE_URL est automatiquement fourni par Vite
-// selon la valeur de "base" dans vite.config.js
 // ─────────────────────────────────────────────────────────────
-const BASE = import.meta.env.BASE_URL;
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 // Pages
 import Home from "./pages/Home";
@@ -30,16 +25,49 @@ import RealisationDetail from "./pages/RealisationDetail";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+// ─────────────────────────────────────────────────────────────
+// ✅ COMPOSANT DE SCROLL AUTOMATIQUE VERS LES ANCRES
+// Détecte /#secteurs, /#processus, /#faq, /#contact, etc.
+// ─────────────────────────────────────────────────────────────
+function ScrollToHash() {
+  const { hash, pathname } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "");
+      // Délai pour laisser la page Home se charger complètement
+      const timeout = setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const navbarHeight = 110; // hauteur de la navbar sticky
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: "smooth",
+          });
+        }
+      }, 200);
+      return () => clearTimeout(timeout);
+    } else {
+      // Pas de hash → scroll en haut
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [hash, pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToHash />   {/* ✅ AJOUT IMPORTANT */}
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
 
-        {/* Dropdown */}
+        {/* Dropdown Services */}
         <Route path="/archivage" element={<Archivage />} />
         <Route path="/numerisation" element={<Numerisation />} />
         <Route path="/ged" element={<GED />} />
@@ -47,13 +75,16 @@ function App() {
         <Route path="/audit" element={<Audit />} />
         <Route path="/externalisation" element={<Externalisation />} />
 
+        {/* Autres pages */}
         <Route path="/pourquoi" element={<Pourquoi />} />
-        <Route path="/secteurs" element={<Secteurs />} />
-        <Route path="/processus" element={<Processus />} />
         <Route path="/realisation" element={<Realisation />} />
         <Route path="/realisation/:id" element={<RealisationDetail />} />
-        <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Pages conservées mais non utilisées dans la navbar (optionnel) */}
+        <Route path="/secteurs" element={<Secteurs />} />
+        <Route path="/processus" element={<Processus />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
 
       <Footer />

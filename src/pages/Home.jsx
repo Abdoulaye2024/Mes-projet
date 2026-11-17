@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';   // ✅ AJOUT
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const BASE = import.meta.env.BASE_URL;
+
 const partnerLogos = [
   ['A-I-B-D', 'A-I-B-D.png'],
   ['Africa Bank', 'africa-bank.png'],
@@ -30,9 +32,7 @@ const partnerLogos = [
 ];
 
 function Home() {
-  const toggleDropdown = (element) => {
-    element.nextElementSibling.classList.toggle('open');
-  };
+  const location = useLocation();  // ✅ AJOUT
 
   const toggleFaq = (element) => {
     element.parentElement.classList.toggle('open');
@@ -40,7 +40,6 @@ function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
   };
 
   useEffect(() => {
@@ -50,6 +49,25 @@ function Home() {
       offset: 100,
     });
   }, []);
+
+  // ✅ AJOUT : Scroll automatique vers la section si hash présent
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const timeout = setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const navbarHeight = 110;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: 'smooth',
+          });
+        }
+      }, 200);
+      return () => clearTimeout(timeout);
+    }
+  }, [location]);
 
   return (
     <>
@@ -64,7 +82,7 @@ function Home() {
         </h1>
         <p className="hero-sub">
           Le Cabinet ANG Archivage est la référence en gestion documentaire. Nous prenons en charge l'archivage physique, la
-          numérisation et la GED, la mise en place de SAE (Systeme d'Archivage Electronique), l'aménagement de vos salles d'archives, la fourniture de royannages de qualité, et la destruction sécurisée de vos documents. d'entreprise.
+          numérisation et la GED, la mise en place de SAE (Systeme d'Archivage Electronique), l'aménagement de vos salles d'archives, la fourniture de royannages de qualité, et la destruction sécurisée de vos documents d'entreprise.
         </p>
         <div className="hero-actions">
           <a href="#contact" className="btn-primary">Demander un devis gratuit →</a>
@@ -91,16 +109,12 @@ function Home() {
       </section>
 
       <div className="trust-bar">
-        <div className="trust-item"><span className="trust-icon security"></span><span className="trust-text">Sécurité certifiée</span>
-        </div>
-        <div className="trust-item"><span className="trust-icon compliance"></span><span className="trust-text">Conformité
-          réglementaire</span></div>
+        <div className="trust-item"><span className="trust-icon security"></span><span className="trust-text">Sécurité certifiée</span></div>
+        <div className="trust-item"><span className="trust-icon compliance"></span><span className="trust-text">Conformité réglementaire</span></div>
         <div className="trust-item"><span className="trust-icon speed"></span><span className="trust-text">Accès en 24h</span></div>
-        <div className="trust-item"><span className="trust-icon local"></span><span className="trust-text">Présence locale à
-          Dakar</span></div>
+        <div className="trust-item"><span className="trust-icon local"></span><span className="trust-text">Présence locale à Dakar</span></div>
         <div className="trust-item"><span className="trust-icon support"></span><span className="trust-text">Support dédié</span></div>
-        <div className="trust-item"><span className="trust-icon recycle"></span><span className="trust-text">Destruction
-          certifiée</span></div>
+        <div className="trust-item"><span className="trust-icon recycle"></span><span className="trust-text">Destruction certifiée</span></div>
       </div>
 
       <section id="services">
@@ -109,8 +123,7 @@ function Home() {
             <p className="section-label">Nos prestations</p>
             <h2 className="section-title">Quatre services,<br />une seule <em>solution</em></h2>
           </div>
-          <p className="services-desc">Chaque prestation est adaptée aux réalités des entreprises sénégalaises, des PME aux
-            grandes administrations.</p>
+          <p className="services-desc">Chaque prestation est adaptée aux réalités des entreprises sénégalaises, des PME aux grandes administrations.</p>
         </div>
         <div className="services-grid">
 
@@ -118,8 +131,7 @@ function Home() {
             <span className="service-num">01 / 04</span>
             <div className="service-icon"><img src={`${BASE}image/Archivage physique.png`} className="imgCard" alt="" /></div>
             <div className="service-name">Archivage physique</div>
-            <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts, avec contrôle
-              d'accès, gestion des durées de conservation et inventaire complet.</p>
+            <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts, avec contrôle d'accès, gestion des durées de conservation et inventaire complet.</p>
             <ul className="service-features">
               <li>Entrepôt sécurisé et climatisé</li>
               <li>Inventaire et codification des boîtes</li>
@@ -133,8 +145,7 @@ function Home() {
             <span className="service-num">02 / 04</span>
             <div className="service-icon"><img src={`${BASE}image/Numérisation.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Numérisation / Scan</div>
-            <p className="service-desc">Transformation de vos dossiers papier en fichiers numériques indexés, avec
-              reconnaissance de texte (OCR) pour une recherche instantanée.</p>
+            <p className="service-desc">Transformation de vos dossiers papier en fichiers numériques indexés, avec reconnaissance de texte (OCR) pour une recherche instantanée.</p>
             <ul className="service-features">
               <li>Scan haute résolution (300 à 600 dpi)</li>
               <li>OCR et indexation des documents</li>
@@ -148,8 +159,7 @@ function Home() {
             <span className="service-num">03 / 04</span>
             <div className="service-icon"><img src={`${BASE}image/Gestion_Electronique.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Gestion Électronique (GED)</div>
-            <p className="service-desc">Mise en place d'un système de gestion électronique des documents pour centraliser,
-              sécuriser et partager vos fichiers au sein de votre organisation.</p>
+            <p className="service-desc">Mise en place d'un système de gestion électronique des documents pour centraliser, sécuriser et partager vos fichiers au sein de votre organisation.</p>
             <ul className="service-features">
               <li>Classement automatique par catégorie</li>
               <li>Accès sécurisé multi-utilisateurs</li>
@@ -163,8 +173,7 @@ function Home() {
             <span className="service-num">04 / 04</span>
             <div className="service-icon"><img src={`${BASE}image/Destruction_sécurisée.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Destruction sécurisée</div>
-            <p className="service-desc">Élimination confidentielle et certifiée de vos documents en fin de durée de conservation
-              légale, avec remise d'un certificat officiel de destruction.</p>
+            <p className="service-desc">Élimination confidentielle et certifiée de vos documents en fin de durée de conservation légale, avec remise d'un certificat officiel de destruction.</p>
             <ul className="service-features">
               <li>Broyage industriel sécurisé</li>
               <li>Certificat de destruction remis</li>
@@ -178,8 +187,7 @@ function Home() {
             <span className="service-num">05 / 06</span>
             <div className="service-icon"><img src={`${BASE}image/Audit_Conseil.jpg`} className="imgCard" alt="Audit et Conseil" /></div>
             <div className="service-name">Audit et Conseil</div>
-            <p className="service-desc">Évaluation complète de vos systèmes d'archivage existants avec recommandations
-              personnalisées pour optimiser la gestion documentaire.</p>
+            <p className="service-desc">Évaluation complète de vos systèmes d'archivage existants avec recommandations personnalisées pour optimiser la gestion documentaire.</p>
             <ul className="service-features">
               <li>Analyse des flux documentaires</li>
               <li>Évaluation de la conformité légale</li>
@@ -191,11 +199,9 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">06 / 06</span>
-            <div className="service-icon"><img src={`${BASE}image/Externalisation_Archivage.jpg`} className="imgCard" alt="Externalisation" />
-            </div>
+            <div className="service-icon"><img src={`${BASE}image/Externalisation_Archivage.jpg`} className="imgCard" alt="Externalisation" /></div>
             <div className="service-name">Externalisation des Archives</div>
-            <p className="service-desc">Prise en charge complète de vos archives physiques et numériques pour réduire les coûts
-              internes et sécuriser vos documents sensibles.</p>
+            <p className="service-desc">Prise en charge complète de vos archives physiques et numériques pour réduire les coûts internes et sécuriser vos documents sensibles.</p>
             <ul className="service-features">
               <li>Stockage sécurisé externe</li>
               <li>Gestion et inventaire des archives</li>
@@ -235,40 +241,35 @@ function Home() {
               <span className="why-num">01</span>
               <div>
                 <div className="why-title">Expertise locale</div>
-                <p className="why-text">Nous connaissons parfaitement le cadre juridique sénégalais et les durées de
-                  conservation obligatoires selon chaque secteur d'activité.</p>
+                <p className="why-text">Nous connaissons parfaitement le cadre juridique sénégalais et les durées de conservation obligatoires selon chaque secteur d'activité.</p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-num">02</span>
               <div>
                 <div className="why-title">Sécurité maximale</div>
-                <p className="why-text">Entrepôts sous surveillance 24h/24, accès restreint par badge, protection incendie et
-                  suivi GPS pour les transferts de documents sensibles.</p>
+                <p className="why-text">Entrepôts sous surveillance 24h/24, accès restreint par badge, protection incendie et suivi GPS pour les transferts de documents sensibles.</p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-num">03</span>
               <div>
                 <div className="why-title">Accès rapide garanti</div>
-                <p className="why-text">Retrouvez n'importe quel document archivé en moins de 24h. Livraison dans vos bureaux à
-                  Dakar ou consultation sur place dans nos locaux.</p>
+                <p className="why-text">Retrouvez n'importe quel document archivé en moins de 24h. Livraison dans vos bureaux à Dakar ou consultation sur place dans nos locaux.</p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-num">04</span>
               <div>
                 <div className="why-title">Tarifs adaptés au marché local</div>
-                <p className="why-text">Des formules flexibles et transparentes conçues pour les entreprises sénégalaises, sans
-                  frais cachés et avec des contrats sans engagement.</p>
+                <p className="why-text">Des formules flexibles et transparentes conçues pour les entreprises sénégalaises, sans frais cachés et avec des contrats sans engagement.</p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-num">05</span>
               <div>
                 <div className="why-title">Confidentialité absolue</div>
-                <p className="why-text">Accord de confidentialité signé avec chaque client. Nos collaborateurs sont formés et
-                  habilités pour manipuler des documents sensibles.</p>
+                <p className="why-text">Accord de confidentialité signé avec chaque client. Nos collaborateurs sont formés et habilités pour manipuler des documents sensibles.</p>
               </div>
             </div>
           </div>
@@ -276,50 +277,45 @@ function Home() {
           <div className="why-visual">
             <p className="section-label">Certifications & conformité</p>
             <div className="gold-line"></div>
-            <div className="why-visual">
-              <p className="section-label">Certifications & conformité</p>
-              <div className="gold-line"></div>
 
-              <div className="cert-badge">
-                <div className="cert-icon"><i className="fas fa-landmark"></i></div>
-                <div>
-                  <div className="cert-name">Conformité ARTP</div>
-                  <div className="cert-desc">Réglementation sénégalaise sur les données</div>
-                </div>
+            <div className="cert-badge">
+              <div className="cert-icon"><i className="fas fa-landmark"></i></div>
+              <div>
+                <div className="cert-name">Conformité ARTP</div>
+                <div className="cert-desc">Réglementation sénégalaise sur les données</div>
               </div>
+            </div>
 
-              <div className="cert-badge">
-                <div className="cert-icon"><i className="fas fa-shield-alt"></i></div>
-                <div>
-                  <div className="cert-name">Protection des données</div>
-                  <div className="cert-desc">Conformité Commission des Données Personnelles (CDP)</div>
-                </div>
+            <div className="cert-badge">
+              <div className="cert-icon"><i className="fas fa-shield-alt"></i></div>
+              <div>
+                <div className="cert-name">Protection des données</div>
+                <div className="cert-desc">Conformité Commission des Données Personnelles (CDP)</div>
               </div>
+            </div>
 
-              <div className="cert-badge">
-                <div className="cert-icon"><i className="fas fa-file-alt"></i></div>
-                <div>
-                  <div className="cert-name">ISO 15489</div>
-                  <div className="cert-desc">Norme internationale de gestion documentaire</div>
-                </div>
+            <div className="cert-badge">
+              <div className="cert-icon"><i className="fas fa-file-alt"></i></div>
+              <div>
+                <div className="cert-name">ISO 15489</div>
+                <div className="cert-desc">Norme internationale de gestion documentaire</div>
               </div>
+            </div>
 
-              <div className="cert-badge">
-                <div className="cert-icon"><i className="fas fa-check-circle"></i></div>
-                <div>
-                  <div className="cert-name">Charte de confidentialité</div>
-                  <div className="cert-desc">Accord signé avec chaque client</div>
-                </div>
+            <div className="cert-badge">
+              <div className="cert-icon"><i className="fas fa-check-circle"></i></div>
+              <div>
+                <div className="cert-name">Charte de confidentialité</div>
+                <div className="cert-desc">Accord signé avec chaque client</div>
               </div>
+            </div>
 
-              <div className="cert-badge">
-                <div className="cert-icon"><i className="fas fa-user-shield"></i></div>
-                <div>
-                  <div className="cert-name">Habilitation sécurité</div>
-                  <div className="cert-desc">Personnel formé et contrôlé</div>
-                </div>
+            <div className="cert-badge">
+              <div className="cert-icon"><i className="fas fa-user-shield"></i></div>
+              <div>
+                <div className="cert-name">Habilitation sécurité</div>
+                <div className="cert-desc">Personnel formé et contrôlé</div>
               </div>
-
             </div>
           </div>
         </div>
@@ -330,57 +326,16 @@ function Home() {
         <h2 className="section-title">Nous intervenons dans<br />tous les <em>secteurs</em></h2>
 
         <div className="secteurs-grid">
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-balance-scale"></i></div>
-            <div className="secteur-name">Cabinets juridiques</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-hospital"></i></div>
-            <div className="secteur-name">Santé & hôpitaux</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-university"></i></div>
-            <div className="secteur-name">Banque & finance</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-landmark"></i></div>
-            <div className="secteur-name">Administrations</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-hard-hat"></i></div>
-            <div className="secteur-name">BTP & immobilier</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-broadcast-tower"></i></div>
-            <div className="secteur-name">Télécommunications</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-graduation-cap"></i></div>
-            <div className="secteur-name">Éducation</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-briefcase"></i></div>
-            <div className="secteur-name">RH & comptabilité</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-ship"></i></div>
-            <div className="secteur-name">Commerce & import-export</div>
-          </div>
-
-          <div className="secteur-tag">
-            <div className="secteur-icon"><i className="fas fa-industry"></i></div>
-            <div className="secteur-name">Industrie</div>
-          </div>
-
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-balance-scale"></i></div><div className="secteur-name">Cabinets juridiques</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-hospital"></i></div><div className="secteur-name">Santé & hôpitaux</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-university"></i></div><div className="secteur-name">Banque & finance</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-landmark"></i></div><div className="secteur-name">Administrations</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-hard-hat"></i></div><div className="secteur-name">BTP & immobilier</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-broadcast-tower"></i></div><div className="secteur-name">Télécommunications</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-graduation-cap"></i></div><div className="secteur-name">Éducation</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-briefcase"></i></div><div className="secteur-name">RH & comptabilité</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-ship"></i></div><div className="secteur-name">Commerce & import-export</div></div>
+          <div className="secteur-tag"><div className="secteur-icon"><i className="fas fa-industry"></i></div><div className="secteur-name">Industrie</div></div>
         </div>
       </section>
 
@@ -391,26 +346,22 @@ function Home() {
           <div className="process-step">
             <span className="step-num">ÉTAPE 01</span>
             <div className="step-title">Audit & diagnostic</div>
-            <p className="step-desc">Nous analysons vos volumes documentaires, vos types de documents et vos obligations légales
-              de conservation.</p>
+            <p className="step-desc">Nous analysons vos volumes documentaires, vos types de documents et vos obligations légales de conservation.</p>
           </div>
           <div className="process-step">
             <span className="step-num">ÉTAPE 02</span>
             <div className="step-title">Devis personnalisé</div>
-            <p className="step-desc">Vous recevez une proposition sur mesure et un plan d'archivage adapté à votre activité sous
-              48h ouvrées.</p>
+            <p className="step-desc">Vous recevez une proposition sur mesure et un plan d'archivage adapté à votre activité sous 48h ouvrées.</p>
           </div>
           <div className="process-step">
             <span className="step-num">ÉTAPE 03</span>
             <div className="step-title">Collecte & traitement</div>
-            <p className="step-desc">Nos équipes à Dakar assurent la collecte, l'inventaire, la codification et le transfert
-              sécurisé de vos documents.</p>
+            <p className="step-desc">Nos équipes à Dakar assurent la collecte, l'inventaire, la codification et le transfert sécurisé de vos documents.</p>
           </div>
           <div className="process-step">
             <span className="step-num">ÉTAPE 04</span>
             <div className="step-title">Suivi en continu</div>
-            <p className="step-desc">Accédez à vos archives à tout moment via notre interface. Notre équipe reste disponible
-              pour toute demande urgente.</p>
+            <p className="step-desc">Accédez à vos archives à tout moment via notre interface. Notre équipe reste disponible pour toute demande urgente.</p>
           </div>
         </div>
       </section>
@@ -422,8 +373,7 @@ function Home() {
           <div className="temoignage-card">
             <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Amadou Mbaye" />
             <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« ArchivPro a pris en charge toutes nos archives juridiques en moins d'une semaine.
-              Le service est irréprochable, la confidentialité respectée et le personnel très professionnel. »</p>
+            <p className="temoignage-text">« ArchivPro a pris en charge toutes nos archives juridiques en moins d'une semaine. Le service est irréprochable, la confidentialité respectée et le personnel très professionnel. »</p>
             <div className="temoignage-author">
               <div className="author-avatar">AM</div>
               <div>
@@ -435,8 +385,7 @@ function Home() {
           <div className="temoignage-card">
             <img className="mon_avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatou Diallo" />
             <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« La numérisation de nos 15 ans de dossiers patients a été réalisée rapidement et
-              avec une précision remarquable. On retrouve maintenant n'importe quel document en quelques secondes. »</p>
+            <p className="temoignage-text">« La numérisation de nos 15 ans de dossiers patients a été réalisée rapidement et avec une précision remarquable. On retrouve maintenant n'importe quel document en quelques secondes. »</p>
             <div className="temoignage-author">
               <div className="author-avatar">FD</div>
               <div>
@@ -448,8 +397,7 @@ function Home() {
           <div className="temoignage-card">
             <img className="mon_avatar" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Ousmane Sarr" />
             <div className="temoignage-stars">★★★★★</div>
-            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont
-              tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
+            <p className="temoignage-text">« Partenaire fiable depuis 5 ans pour notre archivage comptable. Les délais sont tenus, les tarifs justes et l'équipe toujours disponible. Je recommande sans hésiter. »</p>
             <div className="temoignage-author">
               <div className="author-avatar">OS</div>
               <div>
@@ -535,8 +483,7 @@ function Home() {
           <div className="contact-grid">
             <div className="contact-info">
               <p className="contact-intro" style={{ color: '#ffffff', background: 'none', padding: '0' }}>
-                Notre équipe à Dakar vous répond rapidement. Décrivez-nous votre besoin et nous vous
-                proposons une solution adaptée avec un tarif transparent.
+                Notre équipe à Dakar vous répond rapidement. Décrivez-nous votre besoin et nous vous proposons une solution adaptée avec un tarif transparent.
               </p>
 
               <div className="contact-item">
@@ -560,7 +507,7 @@ function Home() {
                 <div>
                   <div className="contact-item-label" style={{ color: '#287F91' }}>Email</div>
                   <div className="contact-item-value" style={{ color: '#287F91' }}>
-                    <a href="mailto:contact@archivpro.sn" style={{ color: '#287F91', textDecoration: 'none' }}>ang.archivage@gmail.com</a>
+                    <a href="mailto:ang.archivage@gmail.com" style={{ color: '#287F91', textDecoration: 'none' }}>ang.archivage@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -575,7 +522,7 @@ function Home() {
                 </div>
               </div>
 
-              <a href="https://wa.me/221761885512" className="whatsapp-btn" target="_blank">
+              <a href="https://wa.me/221761885512" className="whatsapp-btn" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i> Contacter sur WhatsApp
               </a>
             </div>
@@ -611,7 +558,7 @@ function Home() {
               <div className="form-group">
                 <label className="form-label">Service souhaité *</label>
                 <select className="form-select" required>
-                  <option value="" disabled selected>Sélectionner un service</option>
+                  <option value="" disabled>Sélectionner un service</option>
                   <option>Archivage physique</option>
                   <option>Numérisation / Scan</option>
                   <option>Gestion électronique (GED)</option>
@@ -622,8 +569,7 @@ function Home() {
 
               <div className="form-group">
                 <label className="form-label">Votre message</label>
-                <textarea className="form-textarea"
-                  placeholder="Décrivez votre besoin : volume approximatif de documents, délais souhaités, contraintes particulières…"></textarea>
+                <textarea className="form-textarea" placeholder="Décrivez votre besoin : volume approximatif de documents, délais souhaités, contraintes particulières…"></textarea>
               </div>
 
               <button type="submit" className="btn-primary form-submit">Envoyer ma demande →</button>
