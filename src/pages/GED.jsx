@@ -197,7 +197,7 @@ const GED = () => {
             </ul>
           </div>
           <div className="ged-intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Gestion_Electronique.jpg`} alt="GED Alfresco" />
+            <img src={`image/Gestion_Electronique.jpg`} alt="GED Alfresco" />
           </div>
         </div>
       </section>

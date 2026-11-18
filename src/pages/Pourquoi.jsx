@@ -54,7 +54,7 @@ const Pourquoi = () => {
       {/* HEADER */}
       <section className="propos-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title" style={{ color: '#ffffff' }}>À Propos de ANG ARCHIVAGE</h1>
           <p className="header-subtitle" style={{ color: '#ffffff' }}>La référence de l'archivage professionnel au Sénégal</p>
         </div>

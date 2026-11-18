@@ -197,7 +197,7 @@ const Externalisation = () => {
             </ul>
           </div>
           <div className="externalisation-intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Externalisation_Archivage.jpg`} alt="Externalisation d'Archivage" />
+            <img src={`image/Externalisation_Archivage.jpg`} alt="Externalisation d'Archivage" />
           </div>
         </div>
       </section>

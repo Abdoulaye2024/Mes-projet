@@ -197,7 +197,7 @@ const Destruction = () => {
             </ul>
           </div>
           <div className="destruction-intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Destruction_sécurisée.jpg`} alt="Destruction Sécurisée" />
+            <img src={`image/Destruction_sécurisée.jpg`} alt="Destruction Sécurisée" />
           </div>
         </div>
       </section>

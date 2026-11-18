@@ -141,7 +141,7 @@ a {
 }
 
 /* ==========================================
-   HERO SECTION
+   HERO SECTION - ALIGNÉ À GAUCHE + IMAGE DE FOND
 ========================================== */
 
 .hero {
@@ -149,60 +149,59 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 120px 2rem 80px;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(49, 153, 174, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 50%, rgba(74, 78, 130, 0.05) 0%, transparent 50%),
-    var(--white);
+  align-items: flex-start;
+  text-align: left;
+  padding: 140px 6vw 80px;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+
+  /* ✅ IMAGE D'ARRIÈRE-PLAN ARCHIVES */
+  background-image: url('/image/hero-archives.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+/* ✅ OVERLAY SOMBRE pour lisibilité */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(49, 153, 174, 0.04) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: floatBlob 20s ease-in-out infinite;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 42, 58, 0.92) 0%,
+    rgba(26, 42, 58, 0.80) 45%,
+    rgba(49, 153, 174, 0.55) 100%
+  );
+  z-index: -1;
 }
 
+/* ✅ SUPPRIME LES ANCIENS BLOBS */
 .hero::after {
-  content: '';
-  position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(74, 78, 130, 0.04) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: floatBlob 25s ease-in-out infinite reverse;
+  display: none;
 }
 
-@keyframes floatBlob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-}
+/* ==========================================
+   CONTENU HERO ALIGNÉ À GAUCHE
+========================================== */
 
 .hero-flag {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 8px 20px 8px 16px;
-  background: var(--secondary);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50px;
   color: var(--white);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-md);
   position: relative;
   z-index: 1;
 }
@@ -224,11 +223,11 @@ a {
 .flag-dot .r { background: #E31B23; }
 
 .hero-eyebrow {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--primary);
+  color: var(--primary-light);
   margin-bottom: 1.2rem;
   position: relative;
   z-index: 1;
@@ -236,50 +235,52 @@ a {
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 1.8rem;
-  color: var(--text);
-  max-width: 900px;
+  line-height: 1.08;
+  margin-bottom: 1.6rem;
+  color: var(--white);
+  max-width: 780px;
   position: relative;
   z-index: 1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title em {
   font-style: italic;
-  color: var(--primary);
+  color: var(--primary-light);
   position: relative;
 }
 
 .hero-title em::after {
   content: '';
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   left: 0;
   width: 100%;
   height: 6px;
-  background: var(--primary-gradient);
-  opacity: 0.25;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  opacity: 0.4;
   border-radius: 50px;
 }
 
 .hero-sub {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 680px;
-  margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  margin-bottom: 2.4rem;
   line-height: 1.8;
   position: relative;
   z-index: 1;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 4rem;
+  justify-content: flex-start;
+  margin-bottom: 3.5rem;
   position: relative;
   z-index: 1;
 }
@@ -348,40 +349,55 @@ a {
   box-shadow: var(--shadow-md);
 }
 
+/* Boutons adaptés au fond sombre du hero */
+.hero .btn-secondary {
+  color: var(--white) !important;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.hero .btn-secondary:hover {
+  background: var(--white);
+  color: var(--text) !important;
+  border-color: var(--white);
+}
+
 /* ==========================================
-   HERO STATS
+   HERO STATS - ALIGNÉ À GAUCHE
 ========================================== */
 
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  max-width: 900px;
+  max-width: 780px;
   width: 100%;
-  padding: 2.5rem 3rem;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 2.2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(49, 153, 174, 0.15);
-  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
+  margin-right: auto;
 }
 
 .stat-num {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--white);
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.85rem;
-  color: var(--text-light);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
-  margin-top: 0.3rem;
+  margin-top: 0.35rem;
 }
 
 /* ==========================================
@@ -428,7 +444,7 @@ a {
 }
 
 /* ==========================================
-   SERVICES SECTION
+   SERVICES SECTION - IMAGES PLEINE LARGEUR
 ========================================== */
 
 #services {
@@ -462,12 +478,14 @@ a {
 .service-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 0;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -481,6 +499,7 @@ a {
   transform: scaleX(0);
   transform-origin: left;
   transition: var(--transition);
+  z-index: 2;
 }
 
 .service-card:hover {
@@ -493,36 +512,47 @@ a {
   transform: scaleX(1);
 }
 
+/* IMAGE DU SERVICE - PLEINE LARGEUR */
+.service-icon {
+  width: 100%;
+  height: 260px;
+  border-radius: 0;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  transition: var(--transition);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.service-card:hover .service-icon {
+  background: var(--light);
+}
+
+.service-icon .imgCard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition);
+  display: block;
+}
+
+.service-card:hover .service-icon .imgCard {
+  transform: scale(1.06);
+}
+
+/* CONTENU DE LA CARTE */
 .service-num {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--primary);
   letter-spacing: 1px;
   display: block;
-  margin-bottom: 1rem;
-}
-
-.service-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: var(--radius-md);
-  background: rgba(49, 153, 174, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-  transition: var(--transition);
-}
-
-.service-card:hover .service-icon {
-  background: rgba(49, 153, 174, 0.15);
-  transform: scale(1.05);
-}
-
-.service-icon .imgCard {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  margin: 1.5rem 2rem 1rem;
 }
 
 .service-name {
@@ -530,20 +560,20 @@ a {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.8rem;
+  margin: 0 2rem 0.8rem;
 }
 
 .service-desc {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.7;
-  margin-bottom: 1.2rem;
+  margin: 0 2rem 1.2rem;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin: 0 2rem 1.5rem;
 }
 
 .service-features li {
@@ -569,6 +599,9 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  margin: 0 2rem 2rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 .service-link:hover {
@@ -771,7 +804,7 @@ a {
 }
 
 /* ==========================================
-   SECTEURS SECTION - ICONES FONT AWESOME
+   SECTEURS SECTION
 ========================================== */
 
 #secteurs {
@@ -806,7 +839,6 @@ a {
 
 .secteur-icon {
   font-size: 2.5rem;
-  /* color: var(--primary) !important;  Teal pour les icônes */
   margin-bottom: 0.6rem;
   transition: var(--transition);
   display: block;
@@ -814,7 +846,6 @@ a {
 
 .secteur-tag:hover .secteur-icon {
   transform: scale(1.15) rotate(-5deg);
-  /* color: var(--primary-dark) !important; */
 }
 
 .secteur-name {
@@ -937,7 +968,7 @@ a {
 }
 
 .temoignage-stars {
-  color: #FBBF24;  /* On garde les étoiles jaunes classiques */
+  color: #FBBF24;
   font-size: 1.1rem;
   letter-spacing: 2px;
   margin-bottom: 0.8rem;
@@ -1246,57 +1277,71 @@ a {
 ========================================== */
 
 @media (max-width: 991px) {
-  .hero-title {
-    font-size: 3.2rem;
+  .hero {
+    padding: 120px 4vw 70px;
+    background-attachment: scroll;
   }
-  
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+  }
+
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
+    padding: 1.8rem 2rem;
     gap: 1.5rem;
-    padding: 2rem;
+    max-width: 100%;
   }
-  
+
   .trust-bar {
     grid-template-columns: repeat(3, 1fr);
     padding: 1.5rem 2rem;
   }
-  
+
   .services-header {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     text-align: center;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  .service-icon {
+    height: 220px;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .secteurs-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .process-step::after {
     display: none;
   }
-  
+
   .temoignages-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
@@ -1308,102 +1353,159 @@ a {
 
 @media (max-width: 576px) {
   .hero {
-    padding: 100px 1rem 60px;
+    padding: 110px 1.5rem 60px;
+    align-items: center;
+    text-align: center;
   }
-  
+
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
-  
+
   .hero-sub {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    justify-content: center;
   }
-  
+
   .hero-actions .btn-primary,
   .hero-actions .btn-secondary {
     width: 100%;
     justify-content: center;
   }
-  
+
   .hero-stats {
     grid-template-columns: 1fr 1fr;
+    padding: 1.4rem 1.2rem;
     gap: 1rem;
-    padding: 1.5rem;
   }
-  
+
   .stat-num {
     font-size: 1.8rem;
   }
-  
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
   .trust-bar {
     grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
     padding: 1rem;
   }
-  
+
   .trust-item {
     font-size: 0.8rem;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
-  .service-card {
-    padding: 1.8rem;
+
+  .service-icon {
+    height: 220px;
   }
-  
+
+  .service-num {
+    margin: 1.2rem 1.5rem 0.8rem;
+  }
+
+  .service-name {
+    margin: 0 1.5rem 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .service-desc {
+    margin: 0 1.5rem 1rem;
+  }
+
+  .service-features {
+    margin: 0 1.5rem 1.2rem;
+  }
+
+  .service-link {
+    margin: 0 1.5rem 1.5rem;
+    margin-top: auto;
+  }
+
   .secteurs-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
   }
-  
+
   .secteur-tag {
     padding: 1.2rem 0.8rem;
   }
-  
+
   .secteur-icon {
     font-size: 2rem !important;
   }
-  
+
   .secteur-name {
     font-size: 0.8rem;
   }
-  
+
   .process-steps {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .temoignages-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }
-  
+
   .partenaire-logo {
     width: 80px;
     height: 60px;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .faq-question {
     font-size: 0.95rem;
     padding: 1rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - PETITE MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .secteurs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .stat-num {
+    font-size: 1.5rem;
+  }
+
+  .service-icon {
+    height: 180px;
   }
 }
 
@@ -1468,25 +1570,21 @@ a {
 }
 
 /* ==========================================
-   RESPONSIVE - PETITE MOBILE
+   ANCRES - SCROLL OFFSET
 ========================================== */
 
-@media (max-width: 400px) {
-  .hero-title {
-    font-size: 1.8rem;
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 991px) {
+  section[id] {
+    scroll-margin-top: 90px;
   }
-  
-  .secteurs-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .hero-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    padding: 1rem;
-  }
-  
-  .stat-num {
-    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  section[id] {
+    scroll-margin-top: 80px;
   }
 }

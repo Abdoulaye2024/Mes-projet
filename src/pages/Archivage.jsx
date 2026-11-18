@@ -169,7 +169,7 @@ const Archivage = () => {
             </ul>
           </div>
           <div className="intro-image" data-aos="zoom-in">
-            <img src={`${BASE}image/Archivage physique.png`} alt="Archivage professionnel" />
+            <img src={`image/Archivage physique.png`} alt="Archivage professionnel" />
           </div>
         </div>
       </section>

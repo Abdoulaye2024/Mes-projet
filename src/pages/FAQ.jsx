@@ -197,7 +197,7 @@ const FAQ = () => {
       {/* HEADER FAQ */}
       <section className="faq-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title" style={{ color: '#ffffff' }}>Questions Fréquentes</h1>
           <p className="header-subtitle" style={{ color: '#ffffff' }}>
             Trouvez réponses à vos questions sur nos services

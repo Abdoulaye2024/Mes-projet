@@ -129,7 +129,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">01 / 04</span>
-            <div className="service-icon"><img src={`${BASE}image/Archivage physique.png`} className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src={`image/Archivage physique.png`} className="imgCard" alt="" /></div>
             <div className="service-name">Archivage physique</div>
             <p className="service-desc">Stockage sécurisé de vos documents papier dans nos entrepôts, avec contrôle d'accès, gestion des durées de conservation et inventaire complet.</p>
             <ul className="service-features">
@@ -143,7 +143,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">02 / 04</span>
-            <div className="service-icon"><img src={`${BASE}image/Numérisation.jpg`} className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src={`image/Numérisation.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Numérisation / Scan</div>
             <p className="service-desc">Transformation de vos dossiers papier en fichiers numériques indexés, avec reconnaissance de texte (OCR) pour une recherche instantanée.</p>
             <ul className="service-features">
@@ -157,7 +157,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">03 / 04</span>
-            <div className="service-icon"><img src={`${BASE}image/Gestion_Electronique.jpg`} className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src={`image/Gestion_Electronique.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Gestion Électronique (GED)</div>
             <p className="service-desc">Mise en place d'un système de gestion électronique des documents pour centraliser, sécuriser et partager vos fichiers au sein de votre organisation.</p>
             <ul className="service-features">
@@ -171,7 +171,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">04 / 04</span>
-            <div className="service-icon"><img src={`${BASE}image/Destruction_sécurisée.jpg`} className="imgCard" alt="" /></div>
+            <div className="service-icon"><img src={`image/Destruction_sécurisée.jpg`} className="imgCard" alt="" /></div>
             <div className="service-name">Destruction sécurisée</div>
             <p className="service-desc">Élimination confidentielle et certifiée de vos documents en fin de durée de conservation légale, avec remise d'un certificat officiel de destruction.</p>
             <ul className="service-features">
@@ -185,7 +185,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">05 / 06</span>
-            <div className="service-icon"><img src={`${BASE}image/Audit_Conseil.jpg`} className="imgCard" alt="Audit et Conseil" /></div>
+            <div className="service-icon"><img src={`image/Audit_Conseil.jpg`} className="imgCard" alt="Audit et Conseil" /></div>
             <div className="service-name">Audit et Conseil</div>
             <p className="service-desc">Évaluation complète de vos systèmes d'archivage existants avec recommandations personnalisées pour optimiser la gestion documentaire.</p>
             <ul className="service-features">
@@ -199,7 +199,7 @@ function Home() {
 
           <div className="service-card">
             <span className="service-num">06 / 06</span>
-            <div className="service-icon"><img src={`${BASE}image/Externalisation_Archivage.jpg`} className="imgCard" alt="Externalisation" /></div>
+            <div className="service-icon"><img src={`image/Externalisation_Archivage.jpg`} className="imgCard" alt="Externalisation" /></div>
             <div className="service-name">Externalisation des Archives</div>
             <p className="service-desc">Prise en charge complète de vos archives physiques et numériques pour réduire les coûts internes et sécuriser vos documents sensibles.</p>
             <ul className="service-features">

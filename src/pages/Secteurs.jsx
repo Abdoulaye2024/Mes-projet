@@ -182,7 +182,7 @@ const Secteurs = () => {
       {/* HEADER SECTEURS */}
       <section className="secteurs-header" data-aos="fade-down">
         <div className="header-content">
-          <img src={`${BASE}image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
+          <img src={`image/logo-archive.png`} alt="ArchivPro Dakar" className="header-logo" />
           <h1 className="header-title" style={{ color: '#ffffff' }}>Secteurs d'Activité</h1>
           <p className="header-subtitle" style={{ color: '#ffffff' }}>ArchivPro intervient dans tous les secteurs économiques du Sénégal</p>
         </div>
